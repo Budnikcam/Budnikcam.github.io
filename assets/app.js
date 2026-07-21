@@ -160,4 +160,22 @@
       /* ignore */
     }
   });
+
+  // Cookie consent (necessary vs analytics-ready)
+  const cookieKey = "ss_cookie_consent";
+  const bar = document.getElementById("cookieBar");
+  const acceptBtn = document.getElementById("cookieAccept");
+  const rejectBtn = document.getElementById("cookieReject");
+  const saved = localStorage.getItem(cookieKey);
+  const applyConsent = (value) => {
+    localStorage.setItem(cookieKey, value);
+    document.documentElement.dataset.consent = value;
+    bar?.setAttribute("hidden", "");
+    // Hook for future analytics: only load when value === "accepted"
+    window.dispatchEvent(new CustomEvent("ss:consent", { detail: { value } }));
+  };
+  if (!saved && bar) bar.removeAttribute("hidden");
+  else if (saved) document.documentElement.dataset.consent = saved;
+  acceptBtn?.addEventListener("click", () => applyConsent("accepted"));
+  rejectBtn?.addEventListener("click", () => applyConsent("necessary"));
 })();

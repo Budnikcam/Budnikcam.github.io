@@ -347,6 +347,136 @@ section { padding: clamp(4rem, 9vw, 7rem) var(--pad); position: relative; conten
 .case-body p { margin: 0; color: var(--muted); font-size: .92rem; }
 .case-path { color: var(--silver); font-size: .78rem; opacity: .7; }
 
+.result-list {
+  display: grid; gap: 1rem; max-width: 1280px; margin: 0 auto;
+}
+.result {
+  padding: 1.35rem 1.4rem 1.5rem;
+  border: 1px solid var(--line); border-radius: 1.25rem;
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.015));
+}
+.result-top {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1rem;
+  margin-bottom: .7rem;
+}
+.result-term {
+  font-family: var(--mono); font-size: .72rem; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--gold);
+}
+.result h3 {
+  margin: 0 0 1rem; font-family: var(--display);
+  font-size: clamp(1.15rem, 2.4vw, 1.45rem); letter-spacing: -0.02em;
+}
+.result-grid {
+  margin: 0; display: grid; gap: .85rem;
+}
+.result-grid dt {
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--cyan); margin-bottom: .25rem;
+}
+.result-grid dd { margin: 0; color: var(--muted); font-size: .94rem; }
+.result-note { margin: 1rem 0 0; color: var(--silver); font-size: .82rem; }
+.result-link {
+  display: inline-flex; margin-top: 1rem; color: var(--cyan); font-weight: 600; font-size: .92rem;
+}
+.result-link:hover { text-decoration: underline; }
+
+.proof-bar {
+  display: grid; gap: .75rem; grid-template-columns: repeat(2, minmax(0,1fr));
+  max-width: 1280px; margin: 0 auto 1.4rem;
+}
+.proof-bar div {
+  padding: 1rem 1.1rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--panel);
+}
+.proof-bar b {
+  display: block; font-family: var(--display); font-size: 1.35rem; letter-spacing: -0.03em;
+}
+.proof-bar span { color: var(--muted); font-size: .8rem; }
+
+.reviews {
+  display: grid; gap: 1rem; max-width: 1280px; margin: 0 auto;
+}
+.review {
+  margin: 0; padding: 1.3rem 1.35rem;
+  border: 1px solid var(--line); border-radius: 1.25rem; background: var(--panel);
+}
+.stars { color: var(--gold); letter-spacing: .08em; margin-bottom: .7rem; font-size: .95rem; }
+.review blockquote {
+  margin: 0 0 1rem; color: var(--ink); font-size: .98rem; line-height: 1.55;
+}
+.review figcaption { display: grid; gap: .15rem; }
+.review figcaption b { font-family: var(--display); font-size: .95rem; }
+.review figcaption span { color: var(--muted); font-size: .82rem; }
+.reviews-cta { max-width: 1280px; margin: 1.2rem auto 0; color: var(--muted); font-size: .9rem; }
+.reviews-cta a { color: var(--cyan); font-weight: 600; }
+
+.pricing {
+  display: grid; gap: 1rem; max-width: 1280px; margin: 0 auto;
+}
+.price-card {
+  padding: 1.4rem 1.35rem 1.5rem;
+  border: 1px solid var(--line); border-radius: 1.35rem;
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.015));
+  display: grid; align-content: start; gap: .55rem;
+}
+.price-card.featured {
+  border-color: rgba(92,225,255,.35);
+  background:
+    radial-gradient(420px 180px at 20% 0%, rgba(92,225,255,.12), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+}
+.price-name {
+  margin: 0; font-family: var(--mono); font-size: .72rem;
+  letter-spacing: .12em; text-transform: uppercase; color: var(--cyan);
+}
+.price-card h3 {
+  margin: 0; font-family: var(--display); font-size: clamp(1.6rem, 3vw, 2rem);
+  letter-spacing: -0.03em;
+}
+.price-lead { margin: 0; color: var(--muted); }
+.price-card ul {
+  margin: .4rem 0 1rem; padding-left: 1.1rem; color: var(--silver); font-size: .92rem;
+}
+.price-card li { margin: .35rem 0; }
+.price-card .btn { justify-self: start; }
+.price-extra {
+  display: grid; gap: .75rem; max-width: 1280px; margin: 1rem auto 0;
+}
+.price-extra div {
+  padding: .95rem 1.1rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--panel);
+}
+.price-extra b { display: block; font-family: var(--display); margin-bottom: .2rem; }
+.price-extra span { color: var(--muted); font-size: .85rem; }
+
+.legal {
+  max-width: 760px; margin: 0 auto; color: var(--muted);
+}
+.legal h1 {
+  margin: 0 0 1rem; font-family: var(--display); color: var(--ink);
+  font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: -0.03em;
+}
+.legal h2 {
+  margin: 2rem 0 .7rem; font-family: var(--display); color: var(--ink); font-size: 1.15rem;
+}
+.legal p, .legal li { line-height: 1.65; }
+.legal a { color: var(--cyan); font-weight: 600; }
+.legal-meta { font-family: var(--mono); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--cyan); }
+
+.cookie {
+  position: fixed; left: var(--pad); right: var(--pad); bottom: 1rem; z-index: 120;
+  display: grid; gap: 1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(92,225,255,.25); border-radius: 1.2rem;
+  background: rgba(5,7,11,.92); backdrop-filter: blur(16px);
+  box-shadow: 0 20px 60px rgba(0,0,0,.45);
+}
+.cookie[hidden] { display: none !important; }
+.cookie p { margin: 0; color: var(--muted); font-size: .9rem; max-width: 70ch; }
+.cookie a { color: var(--cyan); font-weight: 600; }
+.cookie-actions { display: flex; flex-wrap: wrap; gap: .55rem; }
+body:has(.sticky:not([hidden])) .cookie { bottom: 4.6rem; }
+
+.footer a { color: var(--cyan); }
 .timeline {
   display: grid; gap: .8rem; max-width: 1280px; margin: 0 auto;
 }
@@ -428,6 +558,13 @@ section { padding: clamp(4rem, 9vw, 7rem) var(--pad); position: relative; conten
   .timeline { grid-template-columns: repeat(4, 1fr); }
   .services { grid-template-columns: repeat(3, 1fr); }
   .about { grid-template-columns: 1.2fr .8fr; }
+  .result-grid { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; }
+  .proof-bar { grid-template-columns: repeat(4, minmax(0,1fr)); }
+  .reviews { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .pricing { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .price-extra { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .cookie { grid-template-columns: 1fr auto; align-items: center; bottom: 1.2rem; }
+  body:has(.sticky:not([hidden])) .cookie { bottom: 1.2rem; }
   .sticky { display: none; }
   .footer { padding-bottom: 2rem; }
 }
