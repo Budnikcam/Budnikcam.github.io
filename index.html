@@ -1,17 +1,275 @@
-<!-- client/index.html -->
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <title>Тишина — хоррор-игра</title>
-    <script type="module" crossorigin src="/assets/index-BbGuh8LM.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Mr9EP_Nb.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Соломичев Иван — портфолио разработчика</title>
+  <meta name="description" content="Full-stack разработчик из Смоленска. Сайты под ключ, React, Python, боты, API. Оценка 5.0 на YouDo, 4 года опыта."/>
+  <meta name="theme-color" content="#f6f3ee"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+  <a class="skip" href="#work">К работам</a>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#">Соломичев <span>Иван</span></a>
+    <nav class="nav" aria-label="Навигация">
+      <a href="#work">Работы</a>
+      <a href="#about">Обо мне</a>
+      <a href="#services">Услуги</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <a class="btn" href="#contact">Написать</a>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-media" aria-hidden="true">
+        <img src="assets/images/hero-bg.png" alt="" width="1920" height="1080"/>
+      </div>
+      <div class="hero-veil" aria-hidden="true"></div>
+
+      <div>
+        <p class="hero-kicker"><i></i> Full-stack · Смоленск · 5.0 на YouDo</p>
+        <h1>Соломичев Иван — <em>сайты и код под ключ</em></h1>
+        <p class="hero-lead">
+          Разработчик полного цикла с опытом более четырёх лет. От идеи и архитектуры до вёрстки,
+          серверной логики и деплоя — сам от начала до конца.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#contact">Обсудить задачу</a>
+          <a class="btn btn-ghost" href="#work">Смотреть работы</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>4</strong><span>года стажа</span></div>
+          <div class="stat"><strong>50+</strong><span>проектов</span></div>
+          <div class="stat"><strong>5.0</strong><span>оценка · 13 отзывов</span></div>
+          <div class="stat"><strong>14</strong><span>заданий на YouDo</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Портфолио</p>
+          <h2>Примеры направлений работ</h2>
+        </div>
+        <p>Лендинги, магазины, туристические сервисы, админки и интерфейсы — визуальный уровень, который внушает доверие.</p>
+      </div>
+
+      <div class="filters reveal" role="tablist" aria-label="Фильтр">
+        <button class="filter is-on" type="button" data-filter="all">Все</button>
+        <button class="filter" type="button" data-filter="site">Сайты</button>
+        <button class="filter" type="button" data-filter="shop">Магазины</button>
+        <button class="filter" type="button" data-filter="app">Приложения</button>
+      </div>
+
+      <div class="gallery">
+        <a class="card wide reveal" data-cat="site" href="work/severny-bereg.html">
+          <div class="card-media"><img src="assets/images/case-landing.png" alt="Лендинг в мягком премиум-стиле" width="1600" height="900" loading="lazy"/></div>
+          <div class="card-body">
+            <span class="card-tag">Лендинг · под ключ</span>
+            <h3>Коммерческий лендинг</h3>
+            <p>Сильный первый экран, оффер и путь к заявке — как на благотворительных и коммерческих проектах.</p>
+          </div>
+        </a>
+
+        <a class="card reveal" data-cat="shop" href="work/veloshop.html">
+          <div class="card-media"><img src="assets/images/case-shop.png" alt="Интернет-магазин на планшете" width="1200" height="900" loading="lazy"/></div>
+          <div class="card-body">
+            <span class="card-tag">E‑commerce</span>
+            <h3>Интернет-магазин</h3>
+            <p>Каталог, карточки товара, структура под продажи и оплату.</p>
+          </div>
+        </a>
+
+        <a class="card tall reveal" data-cat="site" href="work/yoga.html">
+          <div class="card-media"><img src="assets/images/case-travel.png" alt="Туристический сайт с пейзажем" width="1200" height="900" loading="lazy"/></div>
+          <div class="card-body">
+            <span class="card-tag">Travel</span>
+            <h3>Туристический сайт</h3>
+            <p>Бронирование и онлайн-оплата — спокойный, «дорогой» визуал.</p>
+          </div>
+        </a>
+
+        <a class="card reveal" data-cat="app" href="work/dash.html">
+          <div class="card-media"><img src="assets/images/case-dashboard.png" alt="Дашборд и админ-панель" width="1600" height="900" loading="lazy"/></div>
+          <div class="card-body">
+            <span class="card-tag">React · Admin</span>
+            <h3>Админ-панель</h3>
+            <p>Личные кабинеты и интерфейсы на React с чистой иерархией данных.</p>
+          </div>
+        </a>
+
+        <a class="card reveal" data-cat="site app" href="work/saas-pulse.html">
+          <div class="card-media"><img src="assets/images/case-landing.png" alt="SaaS и веб-сервис" width="1600" height="900" loading="lazy" style="object-position:left center"/></div>
+          <div class="card-body">
+            <span class="card-tag">SaaS / сервис</span>
+            <h3>Веб-приложение</h3>
+            <p>API, авторизация, интеграции — полный цикл без посредников.</p>
+          </div>
+        </a>
+
+        <a class="card reveal" data-cat="site" href="work/kadr.html">
+          <div class="card-media"><img src="assets/images/about-photo.png" alt="Корпоративный и контентный сайт" width="1200" height="1200" loading="lazy"/></div>
+          <div class="card-body">
+            <span class="card-tag">Корп. сайт</span>
+            <h3>Сайт организации</h3>
+            <p>WordPress, Tilda, кастомная вёрстка — удобно для доноров, клиентов и команды.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about">
+        <div class="about-photo reveal">
+          <img src="assets/images/about-photo.png" alt="Рабочая атмосфера разработчика" width="800" height="800"/>
+        </div>
+        <div class="about-copy reveal">
+          <p class="eyebrow">Обо мне</p>
+          <h2>Решаю задачи комплексно — от идеи до запуска</h2>
+          <p>
+            Стаж 4 года. Делаю сайты под ключ, веб-приложения, backend, Telegram-ботов,
+            десктопные утилиты и автоматизацию. Код чистый и документированный — проект легко передать дальше.
+          </p>
+          <p>
+            27 лет, Смоленск. Документы на YouDo подтверждены. Официально: договор, самозанятость, акты.
+            Всегда на связи, с промежуточными демонстрациями и гарантийной поддержкой после сдачи.
+          </p>
+          <div class="chips">
+            <span class="chip">Python · FastAPI · Django</span>
+            <span class="chip">Node.js · Nest</span>
+            <span class="chip">React · Next.js</span>
+            <span class="chip">C# · .NET</span>
+            <span class="chip">WordPress · Tilda</span>
+            <span class="chip">PostgreSQL · Docker</span>
+            <span class="chip">Метрика · Директ</span>
+            <span class="chip">Telegram-боты</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Услуги</p>
+          <h2>Что могу сделать для вас</h2>
+        </div>
+        <p>На YouDo: 1 место в «Сайт под ключ», 3 место в «Создание лендингов».</p>
+      </div>
+      <div class="services">
+        <article class="service reveal">
+          <h3>Сайт под ключ</h3>
+          <p>Лендинги, визитки, корпоративные сайты, интернет-магазины. Вёрстка, логика, деплой.</p>
+        </article>
+        <article class="service reveal">
+          <h3>Веб-приложения</h3>
+          <p>React-админки, личные кабинеты, API, авторизация, базы данных и интеграции.</p>
+        </article>
+        <article class="service reveal">
+          <h3>Боты и автоматизация</h3>
+          <p>Telegram-боты с оплатой и CRM, парсинг, Python/C# утилиты, рефакторинг чужого кода.</p>
+        </article>
+        <article class="service reveal">
+          <h3>Реклама и аналитика</h3>
+          <p>Яндекс.Метрика, цели и воронки, Директ, SEO-аудит и техническая оптимизация.</p>
+        </article>
+        <article class="service reveal">
+          <h3>CMS и доработки</h3>
+          <p>WordPress, WooCommerce, Битрикс24, Tilda Zero Block — доработка и поддержка.</p>
+        </article>
+        <article class="service reveal">
+          <h3>Калькуляторы и PDF</h3>
+          <p>Коммерческие калькуляторы с экспортом, квизы, формы и сложные интерактивные блоки.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Отзывы YouDo</p>
+          <h2>Средняя оценка 5.0 · 13 отзывов</h2>
+        </div>
+        <p>Реальные отзывы заказчиков — без отрицательных оценок.</p>
+      </div>
+      <div class="reviews">
+        <article class="review reveal">
+          <div class="review-top"><strong>Алия К.</strong><span class="stars">★★★★★</span></div>
+          <p>Иван настоящий профессионал! Сделал аудит чужого сайта, нашёл более 20 ошибок и исправил за вечер. Дождался ответы платёжных систем и интегрировал оплату. Будем надеяться на дальнейшее сотрудничество!</p>
+          <div class="task">Завершить разработку сайта</div>
+        </article>
+        <article class="review reveal">
+          <div class="review-top"><strong>Егор В.</strong><span class="stars">★★★★★</span></div>
+          <p>Отличный исполнитель, всё делает очень быстро и качественно, мне всё очень понравилось! Рекомендую!!</p>
+          <div class="task">Сайт по продаже водолазного снаряжения</div>
+        </article>
+        <article class="review reveal">
+          <div class="review-top"><strong>Артём К.</strong><span class="stars">★★★★★</span></div>
+          <p>Все супер, всегда на связи. Были правки после сдачи — на каждую предлагал адекватную цену. Советую специалиста, буду обращаться ещё.</p>
+          <div class="task">Сайт-квиз-тест</div>
+        </article>
+        <article class="review reveal">
+          <div class="review-top"><strong>Сергей Ч.</strong><span class="stars">★★★★★</span></div>
+          <p>Невероятная работа над сайтом благотворительного фонда. Не только техника, но и забота о миссии. Оперативно, с вниманием к деталям — сайт стал удобнее для подопечных и жертвователей.</p>
+          <div class="task">Доделать сайт на WordPress</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Как работаю</p>
+          <h2>Прозрачный полный цикл</h2>
+        </div>
+      </div>
+      <div class="process reveal">
+        <div class="step"><span>01</span><strong>Обсуждение</strong><p>Цель, сроки, референсы. Фиксируем договорённости.</p></div>
+        <div class="step"><span>02</span><strong>Демонстрации</strong><p>Промежуточные отчёты — вы видите прогресс, не сюрприз в конце.</p></div>
+        <div class="step"><span>03</span><strong>Запуск</strong><p>Деплой, метрика, проверки. Чистый код с документацией.</p></div>
+        <div class="step"><span>04</span><strong>Поддержка</strong><p>Гарантийные правки, консультации, помощь при сбоях.</p></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-panel reveal">
+        <div>
+          <p class="eyebrow">Контакты</p>
+          <h2>Готов обсудить вашу задачу</h2>
+        </div>
+        <p>Напишите на почту или позвоните. В сообщении — кратко о задаче и желаемых сроках. Отвечаю в рабочие часы.</p>
+        <div class="contact-meta">
+          <div>Телефон: <a href="tel:+79066698789">+7 906 669-87-89</a></div>
+          <div>Email: <a href="mailto:vanyasoloma67@gmail.com">vanyasoloma67@gmail.com</a></div>
+          <div>YouDo: Соломичев Иван · Смоленск</div>
+        </div>
+        <div class="contact-actions">
+          <a class="btn" href="mailto:vanyasoloma67@gmail.com?subject=%D0%97%D0%B0%D0%BA%D0%B0%D0%B7%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%98%D0%B2%D0%B0%D0%BD!%0A%0A%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0%3A%0A%D0%A1%D1%80%D0%BE%D0%BA%3A%0A">Написать на почту</a>
+          <a class="btn btn-ghost" href="tel:+79066698789">Позвонить</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>© <span id="year"></span> Соломичев Иван · портфолио</div>
+    <div>Full-stack разработчик · Смоленск</div>
+  </footer>
+
+  <div class="sticky-cta">
+    <a class="btn" href="mailto:vanyasoloma67@gmail.com">Написать Ивану</a>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
 </html>
