@@ -3,303 +3,109 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Соломичев Иван — full-stack разработчик</title>
-  <meta name="description" content="Портфолио Соломичева Ивана. Full-stack разработка с 2022 по 2026 год: сайты, приложения, API, боты и автоматизация."/>
-  <meta name="theme-color" content="#0b1220"/>
+  <title>Соломичев Иван — портфолио</title>
+  <meta name="description" content="Портфолио full-stack разработчика Соломичева Ивана. Сайты, магазины и веб-приложения. 2022–2026."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/styles.css"/>
 </head>
 <body>
-  <a class="skip" href="#work">К работам</a>
-  <div class="cursor" aria-hidden="true"></div>
-
-  <header class="top">
-    <a class="logo" href="#">Соломичев <span>Иван</span></a>
-    <nav class="nav-inline" aria-label="Навигация">
-      <a href="#work">Кейсы</a>
-      <a href="#timeline">2022–2026</a>
+  <header class="header">
+    <a class="logo" href="./">Соломичев Иван</a>
+    <nav>
+      <a href="#work">Работы</a>
       <a href="#about">Опыт</a>
-      <a href="#services">Услуги</a>
       <a href="#contact">Контакты</a>
     </nav>
-    <a class="btn btn-gold" href="#contact">Связаться</a>
   </header>
 
   <main>
-    <section class="hero" id="top">
-      <div class="hero-copy">
-        <p class="meta">Full-stack · 2022–2026 · Смоленск</p>
-        <h1>Цифровые продукты <em>под ключ</em></h1>
-        <p class="lead">
-          Разрабатываю сайты, веб-приложения, API и автоматизацию. Веду проект от архитектуры
-          до запуска и поддержки — самостоятельно и прозрачно.
-        </p>
-        <div class="hero-actions">
-          <a class="btn" href="#contact">Обсудить проект</a>
-          <a class="btn btn-line" href="#work">Смотреть кейсы</a>
-        </div>
-        <div class="proof">
-          <div><strong>2022–2026</strong><span>годы практики</span></div>
-          <div><strong>50+</strong><span>завершённых проектов</span></div>
-          <div><strong>5.0</strong><span>средняя оценка клиентов</span></div>
-          <div><strong>100%</strong><span>сопровождение после сдачи</span></div>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <img src="assets/images/hero-arch.png" alt="Современная архитектура — визуальный акцент портфолио" width="1600" height="900"/>
-        <div class="hero-badge">
-          <b>Соломичев Иван</b>
-          <span>Full-stack разработчик · полный цикл</span>
-        </div>
+    <section class="hero">
+      <p class="eyebrow">Full-stack разработчик · 2022–2026</p>
+      <h1>Сайты и веб‑продукты под ключ</h1>
+      <p class="lead">Делаю лендинги, магазины, панели и сервисы: от идеи до запуска. Смоленск.</p>
+      <div class="actions">
+        <a class="btn" href="#work">Смотреть работы</a>
+        <a class="btn btn-ghost" href="mailto:vanyasoloma67@gmail.com">Написать</a>
       </div>
     </section>
 
     <section id="work">
-      <div class="section-head reveal">
-        <div>
-          <p class="eyebrow">Кейсы</p>
-          <h2>Работы с читаемым интерфейсом</h2>
-        </div>
-        <p>Направления проектов: коммерческие сайты, магазины, сервисы и админ-панели.</p>
-      </div>
-
-      <div class="filters reveal">
-        <button class="filter is-on" type="button" data-filter="all">Все</button>
-        <button class="filter" type="button" data-filter="web">Сайты</button>
-        <button class="filter" type="button" data-filter="shop">Магазины</button>
-        <button class="filter" type="button" data-filter="app">Приложения</button>
-      </div>
-
-      <div class="cases">
-        <a class="case wide reveal" data-cat="web" href="work/severny-bereg.html">
-          <div class="case-media">
-            <img src="assets/images/hero-arch.png" alt="" width="1600" height="900"/>
-            <div class="mock">
-              <div class="mock-bar"><i></i><i></i><i></i><span class="mock-url">solomichev.dev/cases/corp</span></div>
-              <div class="mock-body">
-                <div class="mock-nav"><span>Услуги</span><span>Кейсы</span><span>Контакты</span></div>
-                <h3 class="mock-title">Строим цифровые продукты</h3>
-                <p class="mock-text">Корпоративный сайт с сильным оффером и понятным путём к заявке.</p>
-                <span class="mock-cta">Обсудить проект</span>
-              </div>
-            </div>
-          </div>
-          <div class="case-body">
-            <span class="case-tag">Сайт под ключ</span>
-            <h3>Корпоративный лендинг</h3>
-            <p>Структура, типографика и конверсия. Подходит для услуг и B2B-офферов.</p>
+      <h2>5 проектов</h2>
+      <p class="section-note">У каждого — отдельный адрес. Скриншот снят с этой же страницы.</p>
+      <div class="grid">
+        <a class="card" href="sites/aurora-corp/">
+          <img src="assets/shots/aurora-corp.png" alt="Скриншот сайта Aurora Corp" width="1280" height="800" loading="lazy"/>
+          <div class="card-body">
+            <span>sites/aurora-corp</span>
+            <h3>Aurora Corp</h3>
+            <p>Корпоративный сайт услуг</p>
           </div>
         </a>
-
-        <a class="case reveal" data-cat="shop" href="work/veloshop.html">
-          <div class="case-media">
-            <img src="assets/images/photo-gear.png" alt="Предметная съёмка экипировки" width="1600" height="900"/>
-            <div class="mock shop">
-              <div class="mock-bar"><i></i><i></i><i></i><span class="mock-url">nordgear.shop</span></div>
-              <div class="mock-body">
-                <div class="mock-nav"><span>Каталог</span><span>Доставка</span><span>Контакты</span></div>
-                <h3 class="mock-title">NORD GEAR</h3>
-                <div class="mock-grid">
-                  <div class="item"><b>Рюкзак Trail 40L</b><span>12 900 ₽</span></div>
-                  <div class="item"><b>Куртка Wind</b><span>24 500 ₽</span></div>
-                  <div class="item"><b>Ботинки Ridge</b><span>18 200 ₽</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="case-body">
-            <span class="case-tag">Интернет-магазин</span>
-            <h3>Каталог и продажи</h3>
-            <p>Карточки товара, цены и логика покупки — интерфейс, который читается сразу.</p>
+        <a class="card" href="sites/nord-shop/">
+          <img src="assets/shots/nord-shop.png" alt="Скриншот магазина Nord Shop" width="1280" height="800" loading="lazy"/>
+          <div class="card-body">
+            <span>sites/nord-shop</span>
+            <h3>Nord Shop</h3>
+            <p>Интернет-магазин снаряжения</p>
           </div>
         </a>
-
-        <a class="case reveal" data-cat="app" href="work/dash.html">
-          <div class="case-media">
-            <img src="assets/images/photo-desk.png" alt="Рабочее место разработчика" width="1200" height="900"/>
-            <div class="mock dash">
-              <div class="mock-bar"><i></i><i></i><i></i><span class="mock-url">app.panel / overview</span></div>
-              <div class="mock-body">
-                <div class="mock-nav"><span>Обзор</span><span>Клиенты</span><span>Заказы</span><span>Аналитика</span></div>
-                <h3 class="mock-title">Выручка за месяц</h3>
-                <div class="kpis">
-                  <div class="kpi"><b>128</b><span>заявок</span></div>
-                  <div class="kpi"><b>94%</b><span>SLA</span></div>
-                  <div class="kpi"><b>1.2M ₽</b><span>оборот</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="case-body">
-            <span class="case-tag">React · Admin</span>
-            <h3>Админ-панель</h3>
-            <p>Метрики, статусы и навигация — интерфейс для ежедневной работы команды.</p>
+        <a class="card" href="sites/pulse-crm/">
+          <img src="assets/shots/pulse-crm.png" alt="Скриншот панели Pulse CRM" width="1280" height="800" loading="lazy"/>
+          <div class="card-body">
+            <span>sites/pulse-crm</span>
+            <h3>Pulse CRM</h3>
+            <p>Админ-панель и метрики</p>
           </div>
         </a>
-
-        <a class="case reveal" data-cat="web" href="work/yoga.html">
-          <div class="case-media">
-            <img src="assets/images/photo-travel.png" alt="Пейзаж для туристического проекта" width="1600" height="900"/>
-            <div class="mock">
-              <div class="mock-bar"><i></i><i></i><i></i><span class="mock-url">travel.route / booking</span></div>
-              <div class="mock-body">
-                <div class="mock-nav"><span>Туры</span><span>Бронирование</span><span>Оплата</span></div>
-                <h3 class="mock-title">Маршруты с онлайн-оплатой</h3>
-                <p class="mock-text">Туристический сервис: витрина направлений, бронь и приём платежей.</p>
-                <span class="mock-cta">Забронировать</span>
-              </div>
-            </div>
-          </div>
-          <div class="case-body">
-            <span class="case-tag">Travel / Booking</span>
-            <h3>Туристический сайт</h3>
-            <p>Бронирование и оплата в одном сценарии — понятно пользователю и бизнесу.</p>
+        <a class="card" href="sites/lake-travel/">
+          <img src="assets/shots/lake-travel.png" alt="Скриншот Lake Travel" width="1280" height="800" loading="lazy"/>
+          <div class="card-body">
+            <span>sites/lake-travel</span>
+            <h3>Lake Travel</h3>
+            <p>Туры и онлайн-бронирование</p>
           </div>
         </a>
-      </div>
-    </section>
-
-    <section id="timeline">
-      <div class="section-head reveal">
-        <div>
-          <p class="eyebrow">Хронология</p>
-          <h2>2022–2026</h2>
-        </div>
-        <p>Четыре года практики: от вёрстки и API до сложных интеграций и сопровождения.</p>
-      </div>
-      <div class="timeline reveal">
-        <div class="year">
-          <b>2022</b>
-          <strong>Старт полного цикла</strong>
-          <p>Лендинги, корпоративные сайты, первая серверная логика и деплой.</p>
-        </div>
-        <div class="year">
-          <b>2023</b>
-          <strong>Продукты и магазины</strong>
-          <p>E‑commerce, CMS, интеграции платежей и аналитики.</p>
-        </div>
-        <div class="year">
-          <b>2024</b>
-          <strong>Приложения и API</strong>
-          <p>React-админки, FastAPI/Node, боты, автоматизация процессов.</p>
-        </div>
-        <div class="year">
-          <b>2025–2026</b>
-          <strong>Сложные запуски</strong>
-          <p>Аудит чужих проектов, рефакторинг, высокие требования к срокам и качеству.</p>
-        </div>
+        <a class="card" href="sites/open-fund/">
+          <img src="assets/shots/open-fund.png" alt="Скриншот Open Fund" width="1280" height="800" loading="lazy"/>
+          <div class="card-body">
+            <span>sites/open-fund</span>
+            <h3>Open Fund</h3>
+            <p>Сайт благотворительного фонда</p>
+          </div>
+        </a>
       </div>
     </section>
 
     <section id="about">
-      <div class="section-head reveal">
-        <div>
-          <p class="eyebrow">Опыт</p>
-          <h2>Соломичев Иван</h2>
-        </div>
-      </div>
-      <div class="split">
-        <div class="panel reveal">
-          <h3>Подход</h3>
-          <p>
-            27 лет, Смоленск. Full-stack разработчик: идея, архитектура, вёрстка, backend и деплой.
-            Код документирую так, чтобы проект можно было передать дальше. Даю промежуточные демонстрации
-            и остаюсь на связи после сдачи.
-          </p>
-          <p>
-            Работаю официально: договор, самозанятость, акты. Гарантийная поддержка, правки и восстановление при сбоях.
-          </p>
-        </div>
-        <div class="panel reveal">
-          <h3>Стек</h3>
-          <div class="chips">
-            <span class="chip">Python · FastAPI · Django · Flask</span>
-            <span class="chip">Node.js · Express · Nest.js</span>
-            <span class="chip">React · Redux · Next.js</span>
-            <span class="chip">HTML / CSS / JS · Tailwind · SCSS</span>
-            <span class="chip">C# · .NET · WPF</span>
-            <span class="chip">C++</span>
-            <span class="chip">PostgreSQL · MySQL · MongoDB · Redis</span>
-            <span class="chip">Docker · Nginx · Linux · CI/CD</span>
-            <span class="chip">WordPress · Битрикс24 · Tilda</span>
-            <span class="chip">Метрика · Директ · SEO</span>
-          </div>
-        </div>
-      </div>
+      <h2>Опыт</h2>
+      <p>
+        С 2022 года разрабатываю сайты и приложения полного цикла: frontend, backend, CMS,
+        боты, интеграции и деплой. Python, Node.js, React, C#, WordPress, Tilda и другое.
+      </p>
+      <ul class="chips">
+        <li>Python / FastAPI / Django</li>
+        <li>React / Next.js</li>
+        <li>Node.js / Nest</li>
+        <li>WordPress / Tilda</li>
+        <li>PostgreSQL / Docker</li>
+      </ul>
     </section>
 
-    <section id="services">
-      <div class="section-head reveal">
-        <div>
-          <p class="eyebrow">Услуги</p>
-          <h2>Что делаю</h2>
-        </div>
-      </div>
-      <div class="services">
-        <article class="service reveal"><h3>Сайты под ключ</h3><p>Лендинги, визитки, корпоративные сайты и интернет-магазины.</p></article>
-        <article class="service reveal"><h3>Веб-приложения</h3><p>SPA, админ-панели и личные кабинеты на React.</p></article>
-        <article class="service reveal"><h3>Backend и API</h3><p>Авторизация, базы данных, интеграции со сторонними сервисами.</p></article>
-        <article class="service reveal"><h3>Боты и автоматизация</h3><p>Telegram-боты, Python/C# утилиты, парсинг и оптимизация процессов.</p></article>
-        <article class="service reveal"><h3>CMS и доработки</h3><p>WordPress, WooCommerce, Битрикс24, Tilda Zero Block.</p></article>
-        <article class="service reveal"><h3>Аналитика и рост</h3><p>Метрика, цели, воронки, Директ и техническое SEO.</p></article>
-      </div>
-    </section>
-
-    <section id="reviews">
-      <div class="section-head reveal">
-        <div>
-          <p class="eyebrow">Отзывы</p>
-          <h2>Что говорят клиенты</h2>
-        </div>
-        <p>Средняя оценка 5.0 по завершённым проектам.</p>
-      </div>
-      <div class="reviews">
-        <article class="review reveal">
-          <div class="review-top"><strong>Алия К.</strong><span class="stars">5.0</span></div>
-          <p>Профессиональный аудит чужого сайта, более 20 найденных ошибок и исправление за вечер. Довёл интеграцию оплаты до рабочего результата.</p>
-        </article>
-        <article class="review reveal">
-          <div class="review-top"><strong>Егор В.</strong><span class="stars">5.0</span></div>
-          <p>Быстро и качественно. Рекомендую по магазину и запуску коммерческого сайта.</p>
-        </article>
-        <article class="review reveal">
-          <div class="review-top"><strong>Артём К.</strong><span class="stars">5.0</span></div>
-          <p>Всегда на связи. Правки после сдачи оценивал прозрачно и выполнял аккуратно.</p>
-        </article>
-        <article class="review reveal">
-          <div class="review-top"><strong>Сергей Ч.</strong><span class="stars">5.0</span></div>
-          <p>Сильная работа над сайтом фонда: и техника, и внимание к удобству для аудитории.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <p class="eyebrow reveal">Контакты</p>
-      <h2 class="reveal">Готов обсудить ваш проект</h2>
-      <p class="reveal">Напишите задачу и сроки — отвечу в рабочие часы и предложу понятный план работ.</p>
-      <div class="contact-meta reveal">
-        <div>Телефон: <a href="tel:+79066698789">+7 906 669-87-89</a></div>
-        <div>Email: <a href="mailto:vanyasoloma67@gmail.com">vanyasoloma67@gmail.com</a></div>
-        <div>Соломичев Иван · Смоленск · 2022–2026</div>
-      </div>
-      <div class="contact-actions reveal">
-        <a class="btn btn-gold" href="mailto:vanyasoloma67@gmail.com?subject=%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%98%D0%B2%D0%B0%D0%BD!%0A%0A%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0%3A%0A%D0%A1%D1%80%D0%BE%D0%BA%3A%0A">Написать на почту</a>
-        <a class="btn btn-line" href="tel:+79066698789" style="border-color:#334155;color:#fff">Позвонить</a>
-      </div>
+    <section id="contact">
+      <h2>Контакты</h2>
+      <p><a href="tel:+79066698789">+7 906 669-87-89</a></p>
+      <p><a href="mailto:vanyasoloma67@gmail.com">vanyasoloma67@gmail.com</a></p>
     </section>
   </main>
 
   <footer class="footer">
-    <div>© <span id="year"></span> Соломичев Иван</div>
-    <div>Full-stack разработка · 2022–2026</div>
+    <span>© <span id="year"></span> Соломичев Иван</span>
+    <span>2022–2026</span>
   </footer>
-
-  <div class="sticky">
-    <a class="btn btn-gold" href="mailto:vanyasoloma67@gmail.com">Написать</a>
-  </div>
-
-  <script src="assets/app.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

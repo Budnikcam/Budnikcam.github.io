@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Pulse CRM — панель управления</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#0b1220;--panel:#121a2e;--ink:#e8eef8;--muted:#93a4bf;--line:#24304a;--ok:#22c55e;--acc:#60a5fa}
+*{box-sizing:border-box}body{margin:0;font-family:"IBM Plex Sans",sans-serif;background:var(--bg);color:var(--ink)}
+a{color:var(--muted);text-decoration:none}.wrap{max-width:1100px;margin:0 auto;padding:1rem}
+.shell{display:grid;grid-template-columns:220px 1fr;gap:1rem;min-height:90vh}
+@media(max-width:800px){.shell{grid-template-columns:1fr}}
+.side{background:var(--panel);border:1px solid var(--line);border-radius:1rem;padding:1rem}
+.side .brand{font-family:"IBM Plex Mono",monospace;margin-bottom:1.2rem}
+.side a{display:block;padding:.55rem .7rem;border-radius:.5rem;margin-bottom:.25rem}
+.side a.active,.side a:hover{background:#1a243c;color:#fff}
+.main{display:grid;gap:1rem;align-content:start}
+.top{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+h1{margin:0;font-size:1.5rem}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+@media(max-width:700px){.kpis{grid-template-columns:1fr}}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:.9rem;padding:1rem}
+.kpi b{display:block;font-size:1.6rem}.kpi span{color:var(--muted);font-size:.85rem}
+.table{background:var(--panel);border:1px solid var(--line);border-radius:.9rem;padding:1rem}
+.row{display:grid;grid-template-columns:1.2fr 1fr .8fr;gap:.5rem;padding:.65rem 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.row:last-child{border-bottom:0}.ok{color:var(--ok)}.acc{color:var(--acc)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="shell">
+  <aside class="side">
+    <div class="brand">pulse / crm</div>
+    <a class="active" href="#">Обзор</a>
+    <a href="#">Клиенты</a>
+    <a href="#">Заказы</a>
+    <a href="#">Аналитика</a>
+    <a href="../../">← Портфолио</a>
+  </aside>
+  <section class="main">
+    <div class="top"><h1>Обзор за месяц</h1><span class="acc">Онлайн · 14 операторов</span></div>
+    <div class="kpis">
+      <div class="kpi"><b>128</b><span>новых заявок</span></div>
+      <div class="kpi"><b>94%</b><span>SLA ответов</span></div>
+      <div class="kpi"><b>1.2M ₽</b><span>оборот</span></div>
+    </div>
+    <div class="table">
+      <div class="row"><strong>Клиент</strong><strong>Статус</strong><strong>Сумма</strong></div>
+      <div class="row"><span>ООО «Север»</span><span class="ok">Оплачено</span><span>86 000 ₽</span></div>
+      <div class="row"><span>ИП Козлова</span><span class="acc">В работе</span><span>24 500 ₽</span></div>
+      <div class="row"><span>Studio Wave</span><span class="ok">Оплачено</span><span>112 000 ₽</span></div>
+    </div>
+  </section>
+</div>
+</div>
+</body>
+</html>
