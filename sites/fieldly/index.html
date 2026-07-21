@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Fieldly — мобильный кабинет полевых команд</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#eef2ff;--ink:#111827;--muted:#6b7280;--acc:#4f46e5;--card:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:"Plus Jakarta Sans",sans-serif;background:linear-gradient(180deg,#e0e7ff,var(--bg));color:var(--ink)}
+a{color:inherit;text-decoration:none}.page{max-width:1080px;margin:0 auto;padding:1rem}
+.layout{display:grid;gap:1.2rem}
+@media(min-width:900px){.layout{grid-template-columns:1fr .85fr;align-items:start}}
+.hero-media{border-radius:20px;overflow:hidden;min-height:320px}
+.hero-media img{width:100%;height:100%;object-fit:cover;display:block;min-height:320px}
+.copy h1{font-size:clamp(1.8rem,3.5vw,2.5rem);margin:.4rem 0 .7rem;line-height:1.15}
+.copy p{color:var(--muted);margin:0 0 1rem;line-height:1.55}
+.phone{background:var(--card);border-radius:28px;box-shadow:0 25px 60px rgba(79,70,229,.16);overflow:hidden;border:1px solid #e5e7eb;max-width:380px;margin:0 auto}
+.notch{height:1.3rem;width:42%;margin:0 auto;background:#111;border-radius:0 0 12px 12px}
+.head{padding:1rem 1.1rem .5rem;display:flex;justify-content:space-between}
+.list{padding:0 1rem 1rem;display:grid;gap:.65rem}
+.task{border:1px solid #e5e7eb;border-radius:14px;padding:.85rem}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;color:var(--acc);background:#eef2ff;padding:.2rem .5rem;border-radius:999px;margin-bottom:.3rem}
+.task h3{margin:0 0 .2rem;font-size:.95rem}.task p{margin:0;color:var(--muted);font-size:.84rem}
+.bar{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #e5e7eb;padding:.7rem;text-align:center;font-size:.78rem;color:var(--muted)}
+.bar .on{color:var(--acc);font-weight:700}
+.back{color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="page">
+  <a class="back" href="../../">← Портфолио</a>
+  <div class="layout" style="margin-top:1rem">
+    <div class="copy">
+      <p style="color:var(--acc);font-weight:700;margin:0;letter-spacing:.04em;text-transform:uppercase;font-size:.78rem">Mobile / PWA</p>
+      <h1>Fieldly — задачи для выездных бригад</h1>
+      <p>Мобильный кабинет: маршруты, статусы работ, акты и офлайн-ready интерфейс. Подходит для сервисных и монтажных компаний.</p>
+      <div class="hero-media"><img src="../../assets/media/projects/mobile.png" alt="Полевой сотрудник с планшетом" width="1600" height="900"/></div>
+    </div>
+    <div class="phone">
+      <div class="notch"></div>
+      <div class="head"><b>Fieldly</b><span style="color:var(--muted);font-size:.85rem">Сегодня</span></div>
+      <div class="list">
+        <article class="task"><span class="tag">В работе</span><h3>Объект «Север-14»</h3><p>Проверка оборудования · до 14:30</p></article>
+        <article class="task"><span class="tag">Новая</span><h3>Заявка #2891</h3><p>Выезд · ул. Ленина, 8</p></article>
+        <article class="task"><span class="tag">Готово</span><h3>Акт подписан</h3><p>Клиент подтвердил · 11:20</p></article>
+      </div>
+      <div class="bar"><span class="on">Задачи</span><span>Карта</span><span>Профиль</span></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

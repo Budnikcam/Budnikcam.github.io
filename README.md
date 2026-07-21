@@ -1,19 +1,17 @@
 # Solomichev Studio
 
-Премиальное портфолио full-stack разработчика.
+https://budnikcam.github.io/
 
-Сайт: https://budnikcam.github.io/
+## Проекты
 
-## Демо-проекты
-
-- `/sites/gos-portal/` — гос / муниципальный портал
-- `/sites/nord-shop/` — интернет-магазин
-- `/sites/pulse-crm/` — веб-приложение / CRM
-- `/sites/mobile-fleet/` — mobile / PWA
-- `/sites/bot-nexus/` — Telegram-боты
-- `/sites/parse-lab/` — парсеры и скрипты
-- `/sites/aurora-corp/` — корпоративный сайт
-- `/sites/lake-travel/` — бронирование
-- `/sites/open-fund/` — фонд
+- `/sites/smol-services/` — городской портал услуг
+- `/sites/trailmarket/` — интернет-магазин
+- `/sites/ledgerops/` — CRM / SaaS
+- `/sites/fieldly/` — mobile / PWA
+- `/sites/shopbot-pro/` — Telegram-бот
+- `/sites/datapine/` — парсеры и скрипты
+- `/sites/northline/` — корпоративный сайт
+- `/sites/karelia-escape/` — туры и бронь
+- `/sites/teplo-fond/` — фонд
 
 Скриншоты: `npm run shots`

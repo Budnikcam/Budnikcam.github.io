@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>LedgerOps — операционная CRM</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#0b1220;--panel:#121a2e;--ink:#e8eef8;--muted:#93a4bf;--line:#24304a;--ok:#22c55e;--acc:#60a5fa}
+*{box-sizing:border-box}body{margin:0;font-family:"IBM Plex Sans",sans-serif;background:var(--bg);color:var(--ink)}
+a{color:var(--muted);text-decoration:none}.wrap{max-width:1140px;margin:0 auto;padding:1rem}
+.hero{display:grid;gap:1rem;margin-bottom:1rem}
+@media(min-width:900px){.hero{grid-template-columns:1.1fr .9fr}}
+.hero-copy h1{margin:0 0 .5rem;font-size:clamp(1.6rem,3vw,2.1rem)}
+.hero-copy p{color:var(--muted);margin:0 0 .8rem}
+.hero-media{border-radius:14px;overflow:hidden;border:1px solid var(--line);min-height:220px}
+.hero-media img{width:100%;height:100%;object-fit:cover;display:block;min-height:220px;opacity:.9}
+.shell{display:grid;gap:1rem}
+@media(min-width:860px){.shell{grid-template-columns:210px 1fr}}
+.side,.main-panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1rem}
+.side .brand{font-family:"IBM Plex Mono",monospace;margin-bottom:1rem;color:var(--acc)}
+.side a{display:block;padding:.55rem .65rem;border-radius:8px;margin-bottom:.2rem}
+.side a.on,.side a:hover{background:#1a243c;color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin:0 0 1rem}
+@media(max-width:700px){.kpis{grid-template-columns:1fr}}
+.kpi{background:#0d1526;border:1px solid var(--line);border-radius:12px;padding:.9rem}
+.kpi b{display:block;font-size:1.45rem}.kpi span{color:var(--muted);font-size:.82rem}
+.row{display:grid;grid-template-columns:1.3fr 1fr .8fr;gap:.5rem;padding:.65rem 0;border-bottom:1px solid var(--line);font-size:.9rem}
+.row:last-child{border-bottom:0}.ok{color:var(--ok)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="hero-copy">
+      <p style="font-family:'IBM Plex Mono',monospace;color:var(--acc);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;margin:0 0 .5rem">LedgerOps · B2B</p>
+      <h1>Операционная CRM для продаж и поддержки</h1>
+      <p>Сделки, SLA, оборот и команда в одном контуре. Демо интерфейса продукта.</p>
+      <a href="../../">← Портфолио</a>
+    </div>
+    <div class="hero-media"><img src="../../assets/media/projects/crm.png" alt="Аналитика на мониторе" width="1600" height="900"/></div>
+  </section>
+  <div class="shell">
+    <aside class="side">
+      <div class="brand">ledger / ops</div>
+      <a class="on" href="#">Обзор</a>
+      <a href="#">Сделки</a>
+      <a href="#">Клиенты</a>
+      <a href="#">Отчёты</a>
+    </aside>
+    <section class="main-panel">
+      <div class="kpis">
+        <div class="kpi"><b>186</b><span>лидов за месяц</span></div>
+        <div class="kpi"><b>97%</b><span>SLA первой реакции</span></div>
+        <div class="kpi"><b>2.4M ₽</b><span>закрытый оборот</span></div>
+      </div>
+      <div class="row"><strong>Клиент</strong><strong>Этап</strong><strong>Сумма</strong></div>
+      <div class="row"><span>ООО «СеверТех»</span><span class="ok">Оплата</span><span>420 000 ₽</span></div>
+      <div class="row"><span>ИП Орлова</span><span>Переговоры</span><span>68 000 ₽</span></div>
+      <div class="row"><span>АгроЛайн</span><span class="ok">Закрыто</span><span>190 000 ₽</span></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Karelia Escape — туры и бронирование</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#eef6ff;--ink:#0f172a;--muted:#475569;--acc:#0369a1;--card:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:Figtree,sans-serif;background:linear-gradient(180deg,#dbeafe,var(--bg));color:var(--ink)}
+a{color:inherit;text-decoration:none}.wrap{max-width:1100px;margin:0 auto;padding:1rem}
+nav{display:flex;justify-content:space-between;align-items:center;padding:.8rem 0}
+.logo{font-family:Fraunces,serif;font-size:1.35rem;font-weight:700}
+nav a{margin-left:1rem;color:var(--muted)}
+.hero{position:relative;border-radius:22px;overflow:hidden;min-height:360px;margin:1rem 0 1.4rem}
+.hero img{width:100%;height:100%;object-fit:cover;display:block;min-height:360px}
+.hero .overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,23,42,.72),rgba(15,23,42,.15));color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:1.6rem}
+.hero h1{font-family:Fraunces,serif;font-size:clamp(1.9rem,4vw,3rem);margin:0 0 .5rem;max-width:14ch;line-height:1.1}
+.hero p{margin:0 0 1rem;max-width:40ch;color:#e2e8f0}
+.btn{display:inline-block;background:#fff;color:#0f172a;font-weight:700;padding:.75rem 1.05rem;border-radius:999px}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));padding-bottom:2.5rem}
+.card{background:var(--card);border-radius:16px;overflow:hidden;box-shadow:0 12px 30px rgba(15,23,42,.08)}
+.card .ph{height:150px;overflow:hidden}.card .ph img{width:100%;height:100%;object-fit:cover}
+.card .body{padding:1rem}.card h3{margin:0 0 .3rem;font-family:Fraunces,serif}.price{color:var(--acc);font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <div class="logo">Karelia Escape</div>
+  <div><a href="#tours">Туры</a><a href="#book">Бронь</a><a href="../../">← Портфолио</a></div>
+</nav>
+<section class="hero">
+  <img src="../../assets/media/projects/travel.png" alt="Озеро в Карелии" width="1600" height="900"/>
+  <div class="overlay">
+    <h1>Тихие маршруты Карелии</h1>
+    <p>Подбор тура, бронь жилья и онлайн-оплата. Сервис для путешественников без суеты.</p>
+    <a class="btn" href="#book">Забронировать даты</a>
+  </div>
+</section>
+<section class="grid" id="tours">
+  <article class="card"><div class="ph"><img src="../../assets/media/projects/travel.png" alt=""/></div><div class="body"><h3>Ладожский берег</h3><p>3 дня · трансфер</p><div class="price">от 18 900 ₽</div></div></article>
+  <article class="card"><div class="ph"><img src="../../assets/media/projects/shop.png" alt="" style="object-position:center 70%"/></div><div class="body"><h3>Лесной weekend</h3><p>2 дня · дом у воды</p><div class="price">от 22 400 ₽</div></div></article>
+  <article class="card"><div class="ph"><img src="../../assets/media/projects/corp.png" alt="" style="object-position:center 80%"/></div><div class="body"><h3>Водный маршрут</h3><p>2 дня · каяки</p><div class="price">от 15 200 ₽</div></div></article>
+</section>
+<section id="book" style="background:#fff;border-radius:16px;padding:1.2rem;margin-bottom:2rem">
+  <h3 style="font-family:Fraunces,serif;margin:0 0 .4rem">Бронирование</h3>
+  <p style="color:var(--muted);margin:0 0 .9rem">Оставьте заявку — менеджер подтвердит даты и счёт на оплату.</p>
+  <a class="btn" href="mailto:vanyasoloma67@gmail.com" style="background:var(--acc);color:#fff">Оставить заявку</a>
+</section>
+</div>
+</body>
+</html>

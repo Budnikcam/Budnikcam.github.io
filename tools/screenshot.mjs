@@ -19,15 +19,15 @@ const mime = {
 };
 
 const sites = [
-  "aurora-corp",
-  "nord-shop",
-  "pulse-crm",
-  "lake-travel",
-  "open-fund",
-  "gos-portal",
-  "bot-nexus",
-  "parse-lab",
-  "mobile-fleet",
+  "smol-services",
+  "trailmarket",
+  "ledgerops",
+  "karelia-escape",
+  "teplo-fond",
+  "fieldly",
+  "shopbot-pro",
+  "datapine",
+  "northline",
 ];
 
 const server = createServer((req, res) => {
