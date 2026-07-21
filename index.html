@@ -3,109 +3,285 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Соломичев Иван — портфолио</title>
-  <meta name="description" content="Портфолио full-stack разработчика Соломичева Ивана. Сайты, магазины и веб-приложения. 2022–2026."/>
+  <title>Соломичев Иван — digital studio</title>
+  <meta name="description" content="Премиальное портфолио full-stack разработчика: сайты, приложения, магазины, боты, парсеры и госпроекты. 2022–2026."/>
+  <meta name="theme-color" content="#05070b"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Sora:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/styles.css"/>
 </head>
 <body>
-  <header class="header">
-    <a class="logo" href="./">Соломичев Иван</a>
-    <nav>
-      <a href="#work">Работы</a>
-      <a href="#about">Опыт</a>
-      <a href="#contact">Контакты</a>
+  <a class="skip" href="#work">К работам</a>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor ring" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a class="logo" href="#">Solomichev <span>Studio</span></a>
+    <nav class="nav-links" aria-label="Навигация">
+      <a href="#work">Кейсы</a>
+      <a href="#stack">Направления</a>
+      <a href="#timeline">2022–2026</a>
+      <a href="#about">О студии</a>
+      <a href="#contact">Контакт</a>
     </nav>
+    <a class="btn" href="#contact">Запустить проект</a>
   </header>
 
   <main>
-    <section class="hero">
-      <p class="eyebrow">Full-stack разработчик · 2022–2026</p>
-      <h1>Сайты и веб‑продукты под ключ</h1>
-      <p class="lead">Делаю лендинги, магазины, панели и сервисы: от идеи до запуска. Смоленск.</p>
-      <div class="actions">
-        <a class="btn" href="#work">Смотреть работы</a>
-        <a class="btn btn-ghost" href="mailto:vanyasoloma67@gmail.com">Написать</a>
+    <section class="hero" id="top">
+      <div class="hero-bg" aria-hidden="true">
+        <img src="assets/media/hero-grid.png" alt="" width="1920" height="1080"/>
+      </div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="kicker"><i></i> Full-stack · Product · Automation</p>
+          <h1>Инженерия уровня <em>будущего</em></h1>
+          <p class="lead">
+            Соломичев Иван — разработка цифровых систем, которые выглядят дорого и работают безупречно:
+            веб, mobile, e‑commerce, боты, парсеры и государственные контуры.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#work">Смотреть кейсы</a>
+            <a class="btn btn-ghost" href="#contact">Обсудить задачу</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong>2022–2026</strong><span>годы практики</span></div>
+            <div><strong>50+</strong><span>запусков</span></div>
+            <div><strong>5.0</strong><span>оценка клиентов</span></div>
+          </div>
+        </div>
+
+        <div class="portrait-stage" id="portrait">
+          <div class="portrait-glow" aria-hidden="true"></div>
+          <div class="portrait-frame" id="portraitFrame">
+            <img src="assets/media/ivan.png" alt="Соломичев Иван" width="900" height="1200"/>
+            <div class="portrait-scan" aria-hidden="true"></div>
+            <div class="portrait-meta">
+              <div><b>Иван Соломичев</b><span>Architect / Engineer</span></div>
+              <div style="text-align:right"><b>Смоленск</b><span>Remote · RF</span></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Web Platforms</span><span>Mobile Apps</span><span>E‑commerce</span><span>Gov Tech</span>
+        <span>Telegram Bots</span><span>Parsers</span><span>CRM / ERP</span><span>Payment Systems</span>
+        <span>Web Platforms</span><span>Mobile Apps</span><span>E‑commerce</span><span>Gov Tech</span>
+        <span>Telegram Bots</span><span>Parsers</span><span>CRM / ERP</span><span>Payment Systems</span>
+      </div>
+    </div>
+
     <section id="work">
-      <h2>5 проектов</h2>
-      <p class="section-note">У каждого — отдельный адрес. Скриншот снят с этой же страницы.</p>
-      <div class="grid">
-        <a class="card" href="sites/aurora-corp/">
-          <img src="assets/shots/aurora-corp.png" alt="Скриншот сайта Aurora Corp" width="1280" height="800" loading="lazy"/>
-          <div class="card-body">
-            <span>sites/aurora-corp</span>
-            <h3>Aurora Corp</h3>
-            <p>Корпоративный сайт услуг</p>
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Selected Work</p>
+          <h2>Реальные форматы продуктов</h2>
+        </div>
+        <p>Открытые демо по путям. Скриншоты сняты с тех же страниц — один в один.</p>
+      </div>
+
+      <div class="filters reveal" role="tablist">
+        <button class="filter is-on" data-filter="all" type="button">Все</button>
+        <button class="filter" data-filter="web" type="button">Сайты</button>
+        <button class="filter" data-filter="shop" type="button">Магазины</button>
+        <button class="filter" data-filter="app" type="button">Приложения</button>
+        <button class="filter" data-filter="gov" type="button">Гос / B2G</button>
+        <button class="filter" data-filter="bot" type="button">Боты / Парсеры</button>
+        <button class="filter" data-filter="mobile" type="button">Mobile</button>
+      </div>
+
+      <div class="cases">
+        <a class="case wide reveal" data-cat="gov web" href="sites/gos-portal/">
+          <div class="case-media"><img src="assets/shots/gos-portal.png" alt="Скриншот гос-портала" width="1280" height="800" loading="lazy"/></div>
+          <div class="case-body">
+            <span class="case-tag">B2G · Portal</span>
+            <h3>Городской цифровой портал</h3>
+            <p>Сервисы для жителей: заявления, статусы, уведомления. Контур, близкий к госзаказам и муниципальным платформам.</p>
+            <span class="case-path">/sites/gos-portal/</span>
           </div>
         </a>
-        <a class="card" href="sites/nord-shop/">
-          <img src="assets/shots/nord-shop.png" alt="Скриншот магазина Nord Shop" width="1280" height="800" loading="lazy"/>
-          <div class="card-body">
-            <span>sites/nord-shop</span>
+
+        <a class="case reveal" data-cat="shop" href="sites/nord-shop/">
+          <div class="case-media"><img src="assets/shots/nord-shop.png" alt="Скриншот интернет-магазина" width="1280" height="800" loading="lazy"/></div>
+          <div class="case-body">
+            <span class="case-tag">E‑commerce</span>
             <h3>Nord Shop</h3>
-            <p>Интернет-магазин снаряжения</p>
+            <p>Каталог, цены, карточки товара — коммерческий магазин под ключ.</p>
+            <span class="case-path">/sites/nord-shop/</span>
           </div>
         </a>
-        <a class="card" href="sites/pulse-crm/">
-          <img src="assets/shots/pulse-crm.png" alt="Скриншот панели Pulse CRM" width="1280" height="800" loading="lazy"/>
-          <div class="card-body">
-            <span>sites/pulse-crm</span>
+
+        <a class="case reveal" data-cat="app" href="sites/pulse-crm/">
+          <div class="case-media"><img src="assets/shots/pulse-crm.png" alt="Скриншот CRM" width="1280" height="800" loading="lazy"/></div>
+          <div class="case-body">
+            <span class="case-tag">Web App</span>
             <h3>Pulse CRM</h3>
-            <p>Админ-панель и метрики</p>
+            <p>Операционная панель: KPI, сделки, статусы в реальном интерфейсе.</p>
+            <span class="case-path">/sites/pulse-crm/</span>
           </div>
         </a>
-        <a class="card" href="sites/lake-travel/">
-          <img src="assets/shots/lake-travel.png" alt="Скриншот Lake Travel" width="1280" height="800" loading="lazy"/>
-          <div class="card-body">
-            <span>sites/lake-travel</span>
+
+        <a class="case reveal" data-cat="mobile" href="sites/mobile-fleet/">
+          <div class="case-media"><img src="assets/shots/mobile-fleet.png" alt="Скриншот мобильного приложения" width="1280" height="800" loading="lazy"/></div>
+          <div class="case-body">
+            <span class="case-tag">Mobile / PWA</span>
+            <h3>Fleet Mobile</h3>
+            <p>Мобильный кабинет полевых сотрудников: задачи, статусы, офлайн-ready UI.</p>
+            <span class="case-path">/sites/mobile-fleet/</span>
+          </div>
+        </a>
+
+        <a class="case reveal" data-cat="bot" href="sites/bot-nexus/">
+          <div class="case-media"><img src="assets/shots/bot-nexus.png" alt="Скриншот платформы ботов" width="1280" height="800" loading="lazy"/></div>
+          <div class="case-body">
+            <span class="case-tag">Telegram Bots</span>
+            <h3>Bot Nexus</h3>
+            <p>Боты с оплатой, CRM-связкой и админкой — от автоответа до полноценного сервиса.</p>
+            <span class="case-path">/sites/bot-nexus/</span>
+          </div>
+        </a>
+
+        <a class="case reveal" data-cat="bot" href="sites/parse-lab/">
+          <div class="case-media"><img src="assets/shots/parse-lab.png" alt="Скриншот лаборатории парсинга" width="1280" height="800" loading="lazy"/></div>
+          <div class="case-body">
+            <span class="case-tag">Parsers / Scripts</span>
+            <h3>Parse Lab</h3>
+            <p>Сбор и очистка данных, мониторинг endpoint’ов, автоматизация выгрузок.</p>
+            <span class="case-path">/sites/parse-lab/</span>
+          </div>
+        </a>
+
+        <a class="case reveal" data-cat="web" href="sites/aurora-corp/">
+          <div class="case-media"><img src="assets/shots/aurora-corp.png" alt="Скриншот корпоративного сайта" width="1280" height="800" loading="lazy"/></div>
+          <div class="case-body">
+            <span class="case-tag">Corporate Web</span>
+            <h3>Aurora Corp</h3>
+            <p>Корпоративный сайт услуг с сильным оффером и маршрутом к заявке.</p>
+            <span class="case-path">/sites/aurora-corp/</span>
+          </div>
+        </a>
+
+        <a class="case reveal" data-cat="web shop" href="sites/lake-travel/">
+          <div class="case-media"><img src="assets/shots/lake-travel.png" alt="Скриншот туристического сервиса" width="1280" height="800" loading="lazy"/></div>
+          <div class="case-body">
+            <span class="case-tag">Booking</span>
             <h3>Lake Travel</h3>
-            <p>Туры и онлайн-бронирование</p>
+            <p>Туры, бронь и онлайн-оплата — сервисный продукт для travel.</p>
+            <span class="case-path">/sites/lake-travel/</span>
           </div>
         </a>
-        <a class="card" href="sites/open-fund/">
-          <img src="assets/shots/open-fund.png" alt="Скриншот Open Fund" width="1280" height="800" loading="lazy"/>
-          <div class="card-body">
-            <span>sites/open-fund</span>
+
+        <a class="case reveal" data-cat="web" href="sites/open-fund/">
+          <div class="case-media"><img src="assets/shots/open-fund.png" alt="Скриншот сайта фонда" width="1280" height="800" loading="lazy"/></div>
+          <div class="case-body">
+            <span class="case-tag">Nonprofit</span>
             <h3>Open Fund</h3>
-            <p>Сайт благотворительного фонда</p>
+            <p>Прозрачный сайт фонда: помощь, отчёты, доверие жертвователей.</p>
+            <span class="case-path">/sites/open-fund/</span>
           </div>
         </a>
+      </div>
+    </section>
+
+    <section id="stack">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Capabilities</p>
+          <h2>Полный контур компетенций</h2>
+        </div>
+      </div>
+      <div class="services">
+        <article class="service reveal"><h3>Сайты и платформы</h3><p>Лендинги, корпоративные порталы, сложные многостраничные системы.</p></article>
+        <article class="service reveal"><h3>Интернет-магазины</h3><p>Каталог, корзина, оплата, интеграции доставки и аналитики.</p></article>
+        <article class="service reveal"><h3>Web / Mobile apps</h3><p>React-кабинеты, PWA, админки, real-time интерфейсы.</p></article>
+        <article class="service reveal"><h3>Гос и B2G</h3><p>Порталы услуг, ЛК заявителя, статусы обращений, безопасные контуры.</p></article>
+        <article class="service reveal"><h3>Боты и скрипты</h3><p>Telegram-боты, автоматизация, платежи, уведомления, админ-панели.</p></article>
+        <article class="service reveal"><h3>Парсинг и API</h3><p>Сбор данных, реверс endpoint’ов, очистка, мониторинг и выгрузки.</p></article>
+      </div>
+    </section>
+
+    <section id="timeline">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Timeline</p>
+          <h2>2022–2026</h2>
+        </div>
+      </div>
+      <div class="timeline reveal">
+        <div class="year"><b>2022</b><strong>Foundation</strong><p>Сайты под ключ, первые API и прод-деплои.</p></div>
+        <div class="year"><b>2023</b><strong>Commerce</strong><p>Магазины, CMS, платежи, рекламная аналитика.</p></div>
+        <div class="year"><b>2024</b><strong>Products</strong><p>CRM, боты, парсеры, мобильные кабинеты.</p></div>
+        <div class="year"><b>2025–2026</b><strong>Systems</strong><p>Сложные интеграции, аудит чужих систем, B2G-форматы.</p></div>
       </div>
     </section>
 
     <section id="about">
-      <h2>Опыт</h2>
-      <p>
-        С 2022 года разрабатываю сайты и приложения полного цикла: frontend, backend, CMS,
-        боты, интеграции и деплой. Python, Node.js, React, C#, WordPress, Tilda и другое.
-      </p>
-      <ul class="chips">
-        <li>Python / FastAPI / Django</li>
-        <li>React / Next.js</li>
-        <li>Node.js / Nest</li>
-        <li>WordPress / Tilda</li>
-        <li>PostgreSQL / Docker</li>
-      </ul>
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Studio</p>
+          <h2>Один исполнитель — полный цикл</h2>
+        </div>
+      </div>
+      <div class="about">
+        <div class="about-card reveal">
+          <h3>Как работаю</h3>
+          <p>
+            Без посредников: архитектура, дизайн-система, код, деплой и поддержка.
+            Промежуточные демо, чистый документированный код, официальное оформление
+            (договор / самозанятость / акты) и гарантия после сдачи.
+          </p>
+          <p>
+            Беру задачи, где важен уровень исполнения: скорость, надёжность и ощущение премиального продукта.
+          </p>
+        </div>
+        <div class="about-card reveal">
+          <h3>Стек</h3>
+          <div class="chips">
+            <span class="chip">Python · FastAPI · Django</span>
+            <span class="chip">Node · Nest · Express</span>
+            <span class="chip">React · Next.js</span>
+            <span class="chip">C# · .NET</span>
+            <span class="chip">PostgreSQL · Redis</span>
+            <span class="chip">Docker · Nginx · CI/CD</span>
+            <span class="chip">WordPress · Bitrix24 · Tilda</span>
+            <span class="chip">Метрика · Директ · SEO</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Контакты</h2>
-      <p><a href="tel:+79066698789">+7 906 669-87-89</a></p>
-      <p><a href="mailto:vanyasoloma67@gmail.com">vanyasoloma67@gmail.com</a></p>
+    <section>
+      <div class="contact reveal" id="contact">
+        <p class="eyebrow">Contact</p>
+        <h2>Готовы к следующему запуску</h2>
+        <p>Опишите задачу и срок — верну план работ, архитектуру и оценку без воды.</p>
+        <div class="contact-meta">
+          <div>Телефон: <a href="tel:+79066698789">+7 906 669-87-89</a></div>
+          <div>Email: <a href="mailto:vanyasoloma67@gmail.com">vanyasoloma67@gmail.com</a></div>
+          <div>Соломичев Иван · Смоленск · 2022–2026</div>
+        </div>
+        <div class="contact-actions">
+          <a class="btn" href="mailto:vanyasoloma67@gmail.com?subject=%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%98%D0%B2%D0%B0%D0%BD!%0A%0A%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0%3A%0A%D0%A1%D1%80%D0%BE%D0%BA%3A%0A">Написать</a>
+          <a class="btn btn-ghost" href="tel:+79066698789">Позвонить</a>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <span>© <span id="year"></span> Соломичев Иван</span>
-    <span>2022–2026</span>
+    <div>© <span id="year"></span> Solomichev Studio</div>
+    <div>Future-grade engineering · 2022–2026</div>
   </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+
+  <div class="sticky">
+    <a class="btn" href="mailto:vanyasoloma67@gmail.com">Связаться</a>
+  </div>
+
+  <script src="assets/app.js"></script>
 </body>
 </html>

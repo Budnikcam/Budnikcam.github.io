@@ -1,19 +1,19 @@
-# Соломичев Иван — портфолио
+# Solomichev Studio
 
-Простой сайт-портфолио и 5 отдельных проектов:
-
-- `/sites/aurora-corp/`
-- `/sites/nord-shop/`
-- `/sites/pulse-crm/`
-- `/sites/lake-travel/`
-- `/sites/open-fund/`
-
-Скриншоты в `assets/shots/` снимаются с этих же страниц:
-
-```bash
-npm i
-npx playwright install chromium
-npm run shots
-```
+Премиальное портфолио full-stack разработчика.
 
 Сайт: https://budnikcam.github.io/
+
+## Демо-проекты
+
+- `/sites/gos-portal/` — гос / муниципальный портал
+- `/sites/nord-shop/` — интернет-магазин
+- `/sites/pulse-crm/` — веб-приложение / CRM
+- `/sites/mobile-fleet/` — mobile / PWA
+- `/sites/bot-nexus/` — Telegram-боты
+- `/sites/parse-lab/` — парсеры и скрипты
+- `/sites/aurora-corp/` — корпоративный сайт
+- `/sites/lake-travel/` — бронирование
+- `/sites/open-fund/` — фонд
+
+Скриншоты: `npm run shots`

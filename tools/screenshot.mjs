@@ -24,6 +24,10 @@ const sites = [
   "pulse-crm",
   "lake-travel",
   "open-fund",
+  "gos-portal",
+  "bot-nexus",
+  "parse-lab",
+  "mobile-fleet",
 ];
 
 const server = createServer((req, res) => {
