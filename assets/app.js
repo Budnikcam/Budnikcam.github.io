@@ -124,28 +124,41 @@
   } else reveals.forEach((el) => el.classList.add("in"));
 
   // Filters + a11y
-  const filters = [...document.querySelectorAll(".filter")];
-  const cases = [...document.querySelectorAll(".case")];
+  const filterRoot = document.querySelector("#work .filters");
+  const filters = [...document.querySelectorAll("#work .filter")];
+  const cases = [...document.querySelectorAll("#work .case")];
   const live = document.getElementById("filterLive");
+
+  const applyFilter = (key) => {
+    let visible = 0;
+    cases.forEach((card) => {
+      const cats = (card.dataset.cat || "").trim().split(/\s+/).filter(Boolean);
+      const show = key === "all" || cats.includes(key);
+      card.hidden = !show;
+      card.classList.toggle("is-hidden", !show);
+      if (show) {
+        card.classList.add("in"); // ensure filtered-in cards are visible even if reveal missed them
+        visible += 1;
+      }
+    });
+    if (live) live.textContent = `Показано проектов: ${visible}`;
+  };
+
   filters.forEach((btn) => {
     btn.setAttribute("aria-pressed", btn.classList.contains("is-on") ? "true" : "false");
-    btn.addEventListener("click", () => {
-      filters.forEach((f) => {
-        f.classList.remove("is-on");
-        f.setAttribute("aria-pressed", "false");
-      });
-      btn.classList.add("is-on");
-      btn.setAttribute("aria-pressed", "true");
-      const key = btn.dataset.filter;
-      let visible = 0;
-      cases.forEach((card) => {
-        const cats = (card.dataset.cat || "").split(/\s+/);
-        const show = key === "all" || cats.includes(key);
-        card.hidden = !show;
-        if (show) visible += 1;
-      });
-      if (live) live.textContent = `Показано проектов: ${visible}`;
+  });
+
+  filterRoot?.addEventListener("click", (event) => {
+    const btn = event.target.closest(".filter");
+    if (!btn || !filterRoot.contains(btn)) return;
+    event.preventDefault();
+    filters.forEach((f) => {
+      f.classList.remove("is-on");
+      f.setAttribute("aria-pressed", "false");
     });
+    btn.classList.add("is-on");
+    btn.setAttribute("aria-pressed", "true");
+    applyFilter(btn.dataset.filter || "all");
   });
 
   // Harden external anchors if any appear later

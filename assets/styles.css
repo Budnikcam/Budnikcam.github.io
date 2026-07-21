@@ -306,9 +306,16 @@ section { padding: clamp(4rem, 9vw, 7rem) var(--pad); position: relative; conten
 .filter {
   border: 1px solid var(--line); background: transparent; color: var(--muted);
   border-radius: 999px; padding: .55rem .95rem; font: inherit; font-size: .85rem; font-weight: 600;
-  transition: .25s var(--ease);
+  transition: .25s var(--ease); cursor: pointer;
 }
-.filter.is-on, .filter:hover {
+.filter:hover {
+  color: var(--ink); border-color: rgba(92,225,255,.45);
+  background: rgba(92,225,255,.08);
+}
+.filter.is-on {
+  color: #041018; background: var(--cyan); border-color: var(--cyan);
+}
+.filter.is-on:hover {
   color: #041018; background: var(--cyan); border-color: var(--cyan);
 }
 
@@ -322,6 +329,10 @@ section { padding: clamp(4rem, 9vw, 7rem) var(--pad); position: relative; conten
   border: 1px solid var(--line); border-radius: 1.25rem; overflow: hidden;
   background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.015));
   transition: transform .35s var(--ease), border-color .35s, box-shadow .35s;
+}
+.case[hidden],
+.case.is-hidden {
+  display: none !important;
 }
 .case:hover {
   transform: translateY(-6px);
