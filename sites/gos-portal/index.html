@@ -1,14 +1,50 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta name="robots" content="noindex,follow"/>
-<meta charset="utf-8"/>
-<meta http-equiv="refresh" content="0;url=../smol-services/"/>
-<link rel="canonical" href="../smol-services/"/>
-<title>Переход…</title>
-<script>location.replace('../smol-services/');</script>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Городской портал услуг</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Roboto+Slab:wght@600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#f3f6fb;--ink:#0f172a;--muted:#64748b;--acc:#1d4ed8;--card:#fff;--line:#dbe3f0}
+*{box-sizing:border-box}body{margin:0;font-family:Manrope,sans-serif;background:var(--bg);color:var(--ink)}
+a{color:inherit;text-decoration:none}.wrap{max-width:1100px;margin:0 auto;padding:1.1rem}
+.top{background:#0b1b3a;color:#fff;border-radius:1rem;padding:1rem 1.2rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.brand{font-family:"Roboto Slab",serif;font-size:1.15rem}.top a{color:#c7d2fe;font-size:.9rem}
+.hero{display:grid;gap:1rem;padding:2rem 0 1.5rem}
+h1{font-family:"Roboto Slab",serif;font-size:clamp(1.8rem,4vw,2.6rem);margin:0;max-width:18ch}
+p{color:var(--muted);line-height:1.55}
+.btn{display:inline-block;background:var(--acc);color:#fff;font-weight:700;padding:.8rem 1.1rem;border-radius:.55rem;margin-top:.4rem}
+.grid{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));padding-bottom:2rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.1rem}
+.card h3{margin:0 0 .35rem}.status{display:inline-block;margin-top:.6rem;font-size:.8rem;font-weight:700;color:#15803d;background:#dcfce7;padding:.25rem .55rem;border-radius:999px}
+.table{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1rem;margin-bottom:2.5rem}
+.row{display:grid;grid-template-columns:1.4fr 1fr .8fr;gap:.5rem;padding:.7rem 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.row:last-child{border-bottom:0}
+</style>
 </head>
 <body>
-<p><a href="../smol-services/">Открыть проект</a></p>
+<div class="wrap">
+  <div class="top">
+    <div class="brand">Единый портал города</div>
+    <div><a href="#">Услуги</a> · <a href="#">Статусы</a> · <a href="../../">← Портфолио</a></div>
+  </div>
+  <section class="hero">
+    <h1>Цифровые сервисы для жителей и организаций</h1>
+    <p>Подача заявлений, отслеживание статусов и уведомления. Формат, близкий к муниципальным и государственным контурам.</p>
+    <a class="btn" href="#services">Каталог услуг</a>
+  </section>
+  <section class="grid" id="services">
+    <article class="card"><h3>Запись в МФЦ</h3><p>Онлайн-запись и подтверждение визита.</p><span class="status">Доступно</span></article>
+    <article class="card"><h3>ЖКХ-обращения</h3><p>Заявки в управляющую организацию.</p><span class="status">Доступно</span></article>
+    <article class="card"><h3>Социальная поддержка</h3><p>Подача документов и проверка статуса.</p><span class="status">Доступно</span></article>
+  </section>
+  <section class="table">
+    <div class="row"><strong>Обращение</strong><strong>Ведомство</strong><strong>Статус</strong></div>
+    <div class="row"><span>№ 1042 · льгота</span><span>Соцзащита</span><span>В работе</span></div>
+    <div class="row"><span>№ 1048 · справка</span><span>МФЦ</span><span>Исполнено</span></div>
+    <div class="row"><span>№ 1051 · ремонт</span><span>ЖКХ</span><span>Принято</span></div>
+  </section>
+</div>
 </body>
 </html>

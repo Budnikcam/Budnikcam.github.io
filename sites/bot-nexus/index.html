@@ -1,14 +1,51 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta name="robots" content="noindex,follow"/>
-<meta charset="utf-8"/>
-<meta http-equiv="refresh" content="0;url=../shopbot-pro/"/>
-<link rel="canonical" href="../shopbot-pro/"/>
-<title>Переход…</title>
-<script>location.replace('../shopbot-pro/');</script>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Bot Nexus — Telegram-боты</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#07110f;--panel:#0d1c18;--ink:#ecfdf5;--muted:#86efac;--acc:#34d399;--line:#134e4a}
+*{box-sizing:border-box}body{margin:0;font-family:"IBM Plex Sans",sans-serif;background:radial-gradient(800px 400px at 20% -10%,#12352c,transparent),var(--bg);color:var(--ink)}
+a{color:inherit;text-decoration:none}.wrap{max-width:1000px;margin:0 auto;padding:1.2rem}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}
+.logo{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:1.3rem}
+nav a{color:#6ee7b7;margin-left:1rem;font-size:.92rem}
+.hero{padding:2.5rem 0 1.5rem;max-width:640px}
+h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(2rem,5vw,3.2rem);margin:0 0 .8rem;line-height:1.05}
+p{color:#a7f3d0;line-height:1.6}
+.btn{display:inline-block;margin-top:1rem;background:var(--acc);color:#064e3b;font-weight:700;padding:.8rem 1.1rem;border-radius:.6rem}
+.chat{background:var(--panel);border:1px solid var(--line);border-radius:1rem;padding:1rem;margin:1.5rem 0 2.5rem;max-width:520px}
+.bubble{background:#11332b;border-radius:1rem;padding:.75rem .9rem;margin:.55rem 0;max-width:85%}
+.bubble.me{margin-left:auto;background:#14532d}
+.meta{font-size:.75rem;color:#6ee7b7;margin-bottom:.25rem}
+.grid{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));padding-bottom:3rem}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:.9rem;padding:1rem}
+.card h3{margin:0 0 .35rem;font-family:"Space Grotesk",sans-serif}
+</style>
 </head>
 <body>
-<p><a href="../shopbot-pro/">Открыть проект</a></p>
+<div class="wrap">
+<nav>
+  <div class="logo">Bot Nexus</div>
+  <div><a href="#demo">Демо</a><a href="#features">Возможности</a><a href="../../">← Портфолио</a></div>
+</nav>
+<section class="hero">
+  <h1>Telegram-боты, которые продают и обслуживают</h1>
+  <p>Автоответ, оплата, CRM, админка и уведомления. От простого сценария до полноценного сервиса внутри мессенджера.</p>
+  <a class="btn" href="#demo">Смотреть сценарий</a>
+</section>
+<section class="chat" id="demo">
+  <div class="bubble"><div class="meta">Бот</div>Здравствуйте! Выберите услугу: 1) консультация 2) оплата тарифа</div>
+  <div class="bubble me"><div class="meta">Клиент</div>2</div>
+  <div class="bubble"><div class="meta">Бот</div>Счёт сформирован: 4 900 ₽. После оплаты доступ откроется автоматически.</div>
+</section>
+<section class="grid" id="features">
+  <article class="card"><h3>Оплата</h3><p>Счета, чеки, доступ после платежа.</p></article>
+  <article class="card"><h3>CRM</h3><p>Лиды и статусы уходят в вашу систему.</p></article>
+  <article class="card"><h3>Админка</h3><p>Рассылки, роли, логи и отчёты.</p></article>
+</section>
+</div>
 </body>
 </html>

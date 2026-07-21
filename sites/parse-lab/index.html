@@ -1,14 +1,45 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta name="robots" content="noindex,follow"/>
-<meta charset="utf-8"/>
-<meta http-equiv="refresh" content="0;url=../datapine/"/>
-<link rel="canonical" href="../datapine/"/>
-<title>Переход…</title>
-<script>location.replace('../datapine/');</script>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Parse Lab — парсинг и скрипты</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#0a0a0b;--panel:#121214;--ink:#f5f5f5;--muted:#a1a1aa;--acc:#f59e0b;--ok:#22c55e;--line:#27272a}
+*{box-sizing:border-box}body{margin:0;font-family:"IBM Plex Sans",sans-serif;background:var(--bg);color:var(--ink)}
+a{color:var(--muted);text-decoration:none}.wrap{max-width:1050px;margin:0 auto;padding:1.2rem}
+nav{display:flex;justify-content:space-between;padding:1rem 0;border-bottom:1px solid var(--line)}
+.logo{font-family:"JetBrains Mono",monospace;color:var(--acc)}
+h1{font-size:clamp(1.8rem,4vw,2.5rem);margin:2rem 0 .8rem}
+p{color:var(--muted);max-width:52ch;line-height:1.55}
+.terminal{background:var(--panel);border:1px solid var(--line);border-radius:.8rem;padding:1rem;margin:1.4rem 0;font-family:"JetBrains Mono",monospace;font-size:.85rem;line-height:1.6}
+.ok{color:var(--ok)}.warn{color:var(--acc)}.muted{color:#71717a}
+.grid{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));padding:1rem 0 3rem}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:.8rem;padding:1rem}
+.card h3{margin:0 0 .35rem;font-family:"JetBrains Mono",monospace;font-size:.95rem}
+</style>
 </head>
 <body>
-<p><a href="../datapine/">Открыть проект</a></p>
+<div class="wrap">
+<nav>
+  <div class="logo">parse@lab:~$</div>
+  <div><a href="#jobs">Jobs</a> · <a href="../../">← Портфолио</a></div>
+</nav>
+<h1>Парсинг, мониторинг и автоматизация выгрузок</h1>
+<p>Скрипты сбора данных, работа с защищёнными endpoint’ами, очистка и доставка в CRM/таблицы/API.</p>
+<div class="terminal">
+  <div class="muted"># job: competitors_prices</div>
+  <div><span class="ok">OK</span> fetched 1 284 records · 2.4s</div>
+  <div><span class="ok">OK</span> normalized · duplicates removed: 37</div>
+  <div><span class="warn">WAIT</span> push → webhook /crm/import</div>
+  <div><span class="ok">OK</span> delivered · batch # thr-9182</div>
+</div>
+<section class="grid" id="jobs">
+  <article class="card"><h3>Price watch</h3><p>Мониторинг цен конкурентов по расписанию.</p></article>
+  <article class="card"><h3>Lead scrape</h3><p>Сбор баз под обзвон и квалификацию.</p></article>
+  <article class="card"><h3>API reverse</h3><p>Разбор закрытых endpoint’ов и стабильные интеграции.</p></article>
+</section>
+</div>
 </body>
 </html>
