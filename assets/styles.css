@@ -17,7 +17,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; text-size-adjust: 100%; }
 body {
   margin: 0;
   font-family: var(--font);
@@ -26,12 +26,21 @@ body {
   line-height: 1.55;
   overflow-x: hidden;
   cursor: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 body.is-touch { cursor: auto; }
 body.is-touch a, body.is-touch button { cursor: pointer; }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; display: block; height: auto; -webkit-user-drag: none; }
+picture { display: contents; }
 a { color: inherit; text-decoration: none; }
+button { -webkit-tap-highlight-color: transparent; }
 ::selection { background: var(--cyan); color: #041018; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
 
 .skip {
   position: absolute; left: -999px; top: 0; z-index: 10000;
@@ -79,12 +88,35 @@ body.is-touch .cursor { display: none; }
   font-size: .92rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
 }
 .logo span { color: var(--cyan); }
-.nav-links { display: none; gap: 1.25rem; }
+.nav-end { display: flex; align-items: center; gap: .65rem; }
+.nav-links {
+  display: none; gap: 1.25rem;
+}
 .nav-links a {
   color: var(--muted); font-size: .88rem; font-weight: 500;
   transition: color .2s;
 }
 .nav-links a:hover { color: var(--ink); }
+.nav-toggle {
+  display: inline-flex; flex-direction: column; justify-content: center; gap: 5px;
+  width: 42px; height: 42px; border-radius: 12px; border: 1px solid var(--line);
+  background: rgba(255,255,255,.03); padding: 0;
+}
+.nav-toggle span {
+  display: block; width: 18px; height: 2px; margin: 0 auto; background: var(--ink);
+  transition: transform .25s var(--ease), opacity .2s;
+}
+body.nav-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+body.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+body.nav-open .nav-links {
+  display: flex; flex-direction: column; position: absolute;
+  top: calc(100% + 0px); left: 0; right: 0;
+  padding: 1rem var(--pad) 1.25rem;
+  background: rgba(5, 7, 11, .94); border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(18px);
+}
+.nav-cta { display: none; }
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: .45rem;
   border: 1px solid transparent; border-radius: 999px;
@@ -250,7 +282,8 @@ body.is-touch .cursor { display: none; }
   to { transform: translateX(-50%); }
 }
 
-section { padding: clamp(4rem, 9vw, 7rem) var(--pad); position: relative; }
+section { padding: clamp(4rem, 9vw, 7rem) var(--pad); position: relative; content-visibility: auto; contain-intrinsic-size: 800px; }
+#work, .hero { content-visibility: visible; }
 .section-head {
   display: flex; flex-wrap: wrap; justify-content: space-between;
   gap: 1rem 2rem; align-items: end; margin-bottom: 2rem;
@@ -385,7 +418,9 @@ section { padding: clamp(4rem, 9vw, 7rem) var(--pad); position: relative; }
 .reveal.in { opacity: 1; transform: none; }
 
 @media (min-width: 880px) {
-  .nav-links { display: flex; }
+  .nav-links { display: flex; position: static; flex-direction: row; padding: 0; background: transparent; border: 0; backdrop-filter: none; }
+  .nav-toggle { display: none; }
+  .nav-cta { display: inline-flex; }
   .hero-grid { grid-template-columns: 1.1fr .9fr; gap: 3rem; }
   .cases { grid-template-columns: repeat(2, 1fr); }
   .case.wide { grid-column: 1 / -1; grid-template-columns: 1.35fr 1fr; grid-template-rows: 1fr; }
@@ -406,4 +441,5 @@ section { padding: clamp(4rem, 9vw, 7rem) var(--pad); position: relative; }
   html { scroll-behavior: auto; }
   .marquee-track, .portrait-scan, .portrait-glow, .portrait-frame img, .hero-copy .kicker i { animation: none !important; }
   .reveal { opacity: 1; transform: none; transition: none; }
+  .case, .service, .btn, .filter { transition: none !important; }
 }

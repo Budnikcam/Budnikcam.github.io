@@ -7,10 +7,17 @@
   <meta name="description" content="Соломичев Иван — full-stack разработчик из Смоленска. Сайты, приложения, интернет-магазины, Telegram-боты, парсеры и госпроекты. Портфолио 2022–2026."/>
   <meta name="keywords" content="Соломичев Иван, разработчик Смоленск, full-stack, сайт под ключ, интернет-магазин, Telegram бот, парсер, CRM, веб-приложение"/>
   <meta name="author" content="Соломичев Иван"/>
-  <meta name="robots" content="index, follow, max-image-preview:large"/>
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
   <meta name="theme-color" content="#05070b"/>
   <meta name="color-scheme" content="dark"/>
+  <meta name="format-detection" content="telephone=yes"/>
+  <meta name="referrer" content="strict-origin-when-cross-origin"/>
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' mailto: tel:; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; upgrade-insecure-requests"/>
   <link rel="canonical" href="https://budnikcam.github.io/"/>
+  <link rel="alternate" href="https://budnikcam.github.io/" hreflang="ru"/>
+  <link rel="alternate" href="https://budnikcam.github.io/" hreflang="x-default"/>
+  <link rel="author" href="/humans.txt"/>
 
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="ru_RU"/>
@@ -18,7 +25,7 @@
   <meta property="og:url" content="https://budnikcam.github.io/"/>
   <meta property="og:title" content="Соломичев Иван — Solomichev Studio"/>
   <meta property="og:description" content="Инженерия цифровых систем: веб, mobile, e‑commerce, боты, парсеры и госпроекты. 2022–2026."/>
-  <meta property="og:image" content="https://budnikcam.github.io/assets/media/og-cover.png"/>
+  <meta property="og:image" content="https://budnikcam.github.io/assets/media/og-cover.jpg"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
   <meta property="og:image:alt" content="Solomichev Studio — портфолио Соломичева Ивана"/>
@@ -26,15 +33,14 @@
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Соломичев Иван — Solomichev Studio"/>
   <meta name="twitter:description" content="Full-stack · Product · Automation. Портфолио разработчика, Смоленск."/>
-  <meta name="twitter:image" content="https://budnikcam.github.io/assets/media/og-cover.png"/>
+  <meta name="twitter:image" content="https://budnikcam.github.io/assets/media/og-cover.jpg"/>
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
   <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
   <link rel="manifest" href="/site.webmanifest"/>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Sora:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="preload" href="assets/fonts/fonts.css" as="style"/>
+  <link rel="preload" href="assets/media/ivan.webp" as="image" type="image/webp"/>
+  <link rel="stylesheet" href="assets/fonts/fonts.css"/>
   <link rel="stylesheet" href="assets/styles.css"/>
 
   <script type="application/ld+json">
@@ -56,7 +62,7 @@
         "name": "Соломичев Иван",
         "alternateName": "Ivan Solomichev",
         "url": "https://budnikcam.github.io/",
-        "image": "https://budnikcam.github.io/assets/media/ivan.png",
+        "image": "https://budnikcam.github.io/assets/media/ivan.jpg",
         "jobTitle": "Full-stack Developer",
         "email": "mailto:vanyasoloma67@gmail.com",
         "telephone": "+7-906-669-87-89",
@@ -83,7 +89,7 @@
         "@id": "https://budnikcam.github.io/#studio",
         "name": "Solomichev Studio",
         "url": "https://budnikcam.github.io/",
-        "image": "https://budnikcam.github.io/assets/media/og-cover.png",
+        "image": "https://budnikcam.github.io/assets/media/og-cover.jpg",
         "description": "Разработка сайтов, приложений, магазинов, ботов и автоматизации под ключ.",
         "areaServed": "RU",
         "priceRange": "$$",
@@ -102,21 +108,29 @@
   <div class="noise" aria-hidden="true"></div>
 
   <header class="nav" id="nav">
-    <a class="logo" href="#">Solomichev <span>Studio</span></a>
-    <nav class="nav-links" aria-label="Навигация">
+    <a class="logo" href="/">Solomichev <span>Studio</span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Навигация">
       <a href="#work">Кейсы</a>
       <a href="#stack">Направления</a>
       <a href="#timeline">2022–2026</a>
       <a href="#about">О студии</a>
       <a href="#contact">Контакт</a>
     </nav>
-    <a class="btn" href="#contact">Запустить проект</a>
+    <div class="nav-end">
+      <a class="btn nav-cta" href="#contact">Запустить проект</a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
   <main>
     <section class="hero" id="top">
       <div class="hero-bg" aria-hidden="true">
-        <img src="assets/media/hero-grid.png" alt="" width="1920" height="1080"/>
+        <picture>
+          <source srcset="assets/media/hero-grid.webp" type="image/webp"/>
+          <img src="assets/media/hero-grid.jpg" alt="" width="1600" height="900" decoding="async" fetchpriority="low"/>
+        </picture>
       </div>
       <div class="hero-grid">
         <div class="hero-copy">
@@ -140,7 +154,10 @@
         <div class="portrait-stage" id="portrait">
           <div class="portrait-glow" aria-hidden="true"></div>
           <div class="portrait-frame" id="portraitFrame">
-            <img src="assets/media/ivan.png" alt="Соломичев Иван" width="900" height="1200"/>
+            <picture>
+              <source srcset="assets/media/ivan.webp" type="image/webp"/>
+              <img src="assets/media/ivan.jpg" alt="Соломичев Иван" width="900" height="1200" decoding="async" fetchpriority="high"/>
+            </picture>
             <div class="portrait-scan" aria-hidden="true"></div>
             <div class="portrait-meta">
               <div><b>Иван Соломичев</b><span>Architect / Engineer</span></div>
@@ -169,19 +186,20 @@
         <p>Отдельный URL у каждого. Скриншот снят с живой страницы — совпадает с тем, что откроете.</p>
       </div>
 
-      <div class="filters reveal" role="tablist">
-        <button class="filter is-on" data-filter="all" type="button">Все</button>
-        <button class="filter" data-filter="web" type="button">Сайты</button>
-        <button class="filter" data-filter="shop" type="button">Магазины</button>
-        <button class="filter" data-filter="app" type="button">Приложения</button>
-        <button class="filter" data-filter="gov" type="button">Гос / B2G</button>
-        <button class="filter" data-filter="bot" type="button">Боты / Парсеры</button>
-        <button class="filter" data-filter="mobile" type="button">Mobile</button>
+      <div class="filters reveal" role="group" aria-label="Фильтр проектов">
+        <button class="filter is-on" data-filter="all" type="button" aria-pressed="true">Все</button>
+        <button class="filter" data-filter="web" type="button" aria-pressed="false">Сайты</button>
+        <button class="filter" data-filter="shop" type="button" aria-pressed="false">Магазины</button>
+        <button class="filter" data-filter="app" type="button" aria-pressed="false">Приложения</button>
+        <button class="filter" data-filter="gov" type="button" aria-pressed="false">Гос / B2G</button>
+        <button class="filter" data-filter="bot" type="button" aria-pressed="false">Боты / Парсеры</button>
+        <button class="filter" data-filter="mobile" type="button" aria-pressed="false">Mobile</button>
       </div>
+      <p class="sr-only" id="filterLive" aria-live="polite"></p>
 
       <div class="cases">
         <a class="case wide reveal" data-cat="gov web" href="/sites/smol-services/">
-          <div class="case-media"><img src="/assets/shots/smol-services.png" alt="Смоленские сервисы" width="1280" height="800" loading="lazy"/></div>
+          <div class="case-media"><picture><source srcset="/assets/shots/smol-services.webp" type="image/webp"/><img src="/assets/shots/smol-services.jpg" alt="Смоленские сервисы" width="1280" height="800" loading="lazy" decoding="async"/></picture></div>
           <div class="case-body">
             <span class="case-tag">B2G · Городской портал</span>
             <h3>Смоленские сервисы</h3>
@@ -191,7 +209,7 @@
         </a>
 
         <a class="case reveal" data-cat="shop" href="/sites/trailmarket/">
-          <div class="case-media"><img src="/assets/shots/trailmarket.png" alt="TrailMarket" width="1280" height="800" loading="lazy"/></div>
+          <div class="case-media"><picture><source srcset="/assets/shots/trailmarket.webp" type="image/webp"/><img src="/assets/shots/trailmarket.jpg" alt="TrailMarket" width="1280" height="800" loading="lazy" decoding="async"/></picture></div>
           <div class="case-body">
             <span class="case-tag">E‑commerce</span>
             <h3>TrailMarket</h3>
@@ -201,7 +219,7 @@
         </a>
 
         <a class="case reveal" data-cat="app" href="/sites/ledgerops/">
-          <div class="case-media"><img src="/assets/shots/ledgerops.png" alt="LedgerOps CRM" width="1280" height="800" loading="lazy"/></div>
+          <div class="case-media"><picture><source srcset="/assets/shots/ledgerops.webp" type="image/webp"/><img src="/assets/shots/ledgerops.jpg" alt="LedgerOps CRM" width="1280" height="800" loading="lazy" decoding="async"/></picture></div>
           <div class="case-body">
             <span class="case-tag">SaaS / CRM</span>
             <h3>LedgerOps</h3>
@@ -211,7 +229,7 @@
         </a>
 
         <a class="case reveal" data-cat="mobile" href="/sites/fieldly/">
-          <div class="case-media"><img src="/assets/shots/fieldly.png" alt="Fieldly mobile" width="1280" height="800" loading="lazy"/></div>
+          <div class="case-media"><picture><source srcset="/assets/shots/fieldly.webp" type="image/webp"/><img src="/assets/shots/fieldly.jpg" alt="Fieldly mobile" width="1280" height="800" loading="lazy" decoding="async"/></picture></div>
           <div class="case-body">
             <span class="case-tag">Mobile / PWA</span>
             <h3>Fieldly</h3>
@@ -221,7 +239,7 @@
         </a>
 
         <a class="case reveal" data-cat="bot" href="/sites/shopbot-pro/">
-          <div class="case-media"><img src="/assets/shots/shopbot-pro.png" alt="ShopBot Pro" width="1280" height="800" loading="lazy"/></div>
+          <div class="case-media"><picture><source srcset="/assets/shots/shopbot-pro.webp" type="image/webp"/><img src="/assets/shots/shopbot-pro.jpg" alt="ShopBot Pro" width="1280" height="800" loading="lazy" decoding="async"/></picture></div>
           <div class="case-body">
             <span class="case-tag">Telegram Bot</span>
             <h3>ShopBot Pro</h3>
@@ -231,7 +249,7 @@
         </a>
 
         <a class="case reveal" data-cat="bot" href="/sites/datapine/">
-          <div class="case-media"><img src="/assets/shots/datapine.png" alt="DataPine" width="1280" height="800" loading="lazy"/></div>
+          <div class="case-media"><picture><source srcset="/assets/shots/datapine.webp" type="image/webp"/><img src="/assets/shots/datapine.jpg" alt="DataPine" width="1280" height="800" loading="lazy" decoding="async"/></picture></div>
           <div class="case-body">
             <span class="case-tag">Parsers / Scripts</span>
             <h3>DataPine</h3>
@@ -241,7 +259,7 @@
         </a>
 
         <a class="case reveal" data-cat="web" href="/sites/northline/">
-          <div class="case-media"><img src="/assets/shots/northline.png" alt="Northline" width="1280" height="800" loading="lazy"/></div>
+          <div class="case-media"><picture><source srcset="/assets/shots/northline.webp" type="image/webp"/><img src="/assets/shots/northline.jpg" alt="Northline" width="1280" height="800" loading="lazy" decoding="async"/></picture></div>
           <div class="case-body">
             <span class="case-tag">Corporate Web</span>
             <h3>Northline</h3>
@@ -251,7 +269,7 @@
         </a>
 
         <a class="case reveal" data-cat="web shop" href="/sites/karelia-escape/">
-          <div class="case-media"><img src="/assets/shots/karelia-escape.png" alt="Karelia Escape" width="1280" height="800" loading="lazy"/></div>
+          <div class="case-media"><picture><source srcset="/assets/shots/karelia-escape.webp" type="image/webp"/><img src="/assets/shots/karelia-escape.jpg" alt="Karelia Escape" width="1280" height="800" loading="lazy" decoding="async"/></picture></div>
           <div class="case-body">
             <span class="case-tag">Travel / Booking</span>
             <h3>Karelia Escape</h3>
@@ -261,7 +279,7 @@
         </a>
 
         <a class="case reveal" data-cat="web" href="/sites/teplo-fond/">
-          <div class="case-media"><img src="/assets/shots/teplo-fond.png" alt="Фонд Тепло" width="1280" height="800" loading="lazy"/></div>
+          <div class="case-media"><picture><source srcset="/assets/shots/teplo-fond.webp" type="image/webp"/><img src="/assets/shots/teplo-fond.jpg" alt="Фонд Тепло" width="1280" height="800" loading="lazy" decoding="async"/></picture></div>
           <div class="case-body">
             <span class="case-tag">Nonprofit</span>
             <h3>Фонд «Тепло»</h3>
@@ -366,7 +384,7 @@
     <a class="btn" href="mailto:vanyasoloma67@gmail.com">Связаться</a>
   </div>
 
-  <script src="assets/app.js"></script>
+  <script src="assets/app.js" defer></script>
 </body>
 </html>
 

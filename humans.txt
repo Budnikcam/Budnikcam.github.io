@@ -1,0 +1,9 @@
+/* TEAM */
+Developer: Solomichev Ivan
+Contact: vanyasoloma67@gmail.com
+Location: Smolensk, RU
+
+/* SITE */
+Last update: 2026-07-21
+Standards: HTML5, CSS3, JS
+URL: https://budnikcam.github.io/
