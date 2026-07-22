@@ -32,7 +32,20 @@ body {
 body.is-touch { cursor: auto; }
 body.is-touch a, body.is-touch button { cursor: pointer; }
 img { max-width: 100%; display: block; height: auto; -webkit-user-drag: none; }
-picture { display: contents; }
+picture { display: block; max-width: 100%; }
+.hero-bg picture,
+.portrait-frame picture,
+.case-media picture {
+  width: 100%;
+  height: 100%;
+}
+.hero-bg picture img,
+.portrait-frame picture img,
+.case-media picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 a { color: inherit; text-decoration: none; }
 button { -webkit-tap-highlight-color: transparent; }
 ::selection { background: var(--cyan); color: #041018; }
@@ -553,8 +566,11 @@ body:has(.sticky:not([hidden])) .cookie { bottom: 4.6rem; }
 .sticky .btn { width: 100%; }
 
 .reveal {
-  opacity: 0; transform: translateY(28px);
   transition: opacity .9s var(--ease), transform .9s var(--ease);
+}
+html.js .reveal:not(.in) {
+  opacity: 0;
+  transform: translateY(28px);
 }
 .reveal.in { opacity: 1; transform: none; }
 
@@ -588,6 +604,6 @@ body:has(.sticky:not([hidden])) .cookie { bottom: 4.6rem; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .marquee-track, .portrait-scan, .portrait-glow, .portrait-frame img, .hero-copy .kicker i { animation: none !important; }
-  .reveal { opacity: 1; transform: none; transition: none; }
+  html.js .reveal:not(.in), .reveal { opacity: 1; transform: none; transition: none; }
   .case, .service, .btn, .filter { transition: none !important; }
 }

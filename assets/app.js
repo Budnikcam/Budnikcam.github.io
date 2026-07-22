@@ -1,5 +1,6 @@
 (() => {
   "use strict";
+  document.documentElement.classList.add("js");
 
   const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const touch = matchMedia("(hover: none), (pointer: coarse)").matches;
