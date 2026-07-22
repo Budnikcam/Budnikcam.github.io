@@ -6,7 +6,8 @@
     "check": "node tools/check-site.mjs",
     "build": "node tools/prepare-dist.mjs",
     "shots": "node tools/screenshot.mjs",
-    "optimize": "node tools/optimize-images.mjs"
+    "optimize": "node tools/optimize-images.mjs",
+    "demos": "node tools/build-demos.mjs"
   },
   "devDependencies": {
     "playwright": "^1.54.1"

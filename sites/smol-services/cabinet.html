@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Смоленские сервисы — портал услуг</title>
+<title>Кабинет — Смоленские сервисы</title>
 <meta name="description" content="Городской портал услуг: каталог, статусы обращений, личный кабинет."/>
 <meta name="robots" content="index,follow"/>
-<link rel="canonical" href="https://budnikcam.github.io/sites/smol-services/"/>
+<link rel="canonical" href="https://budnikcam.github.io/sites/smol-services/cabinet.html"/>
 <meta name="referrer" content="strict-origin-when-cross-origin"/>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -18,25 +18,28 @@
 <div class="demo-bar">Демо-кейс Solomichev Studio · <a href="../../">← к портфолио</a></div>
 <header class="top">
   <a class="logo" href="index.html">Смоленские сервисы</a>
-  <nav class="nav"><a href="index.html" class="on">Главная</a><a href="services.html">Услуги</a><a href="status.html">Статусы</a><a href="cabinet.html">Кабинет</a><a href="contacts.html">Контакты</a></nav>
+  <nav class="nav"><a href="index.html">Главная</a><a href="services.html">Услуги</a><a href="status.html">Статусы</a><a href="cabinet.html" class="on">Кабинет</a><a href="contacts.html">Контакты</a></nav>
   <a class="btn btn-sm" href="contacts.html">Связаться</a>
 </header>
 <main>
-<div class="wrap">
-<section class="hero">
-  <div>
-    <p class="kicker">B2G portal</p>
-    <h1>Городские услуги онлайн — заявки, статусы, контроль</h1>
-    <p>Единая точка входа для жителей: МФЦ, ЖКХ, соцподдержка и прозрачные статусы обращений.</p>
-    <div class="hero-actions"><a class="btn" href="services.html">Каталог услуг</a><a class="btn btn-ghost" href="status.html">Проверить статус</a></div>
+<div class="wrap section">
+<p class="kicker">Personal account</p>
+<h2>Личный кабинет заявителя</h2>
+<div class="shell">
+  <aside class="side">
+    <a class="on" href="cabinet.html">Мои заявки</a>
+    <a href="status.html">Статусы</a>
+    <a href="services.html">Новая услуга</a>
+    <a href="contacts.html">Поддержка</a>
+  </aside>
+  <div class="panel">
+    <h3 style="margin-top:0">Активные заявки</h3>
+    <table class="table">
+      <tr><th>Услуга</th><th>Обновлено</th><th>SLA</th></tr>
+      <tr><td>Справка ЖКХ</td><td>сегодня</td><td class="muted">в норме</td></tr>
+      <tr><td>Соцподдержка</td><td>вчера</td><td class="muted">ожидает</td></tr>
+    </table>
   </div>
-  <div class="media"><img src="media/hero.jpg" alt="Портал услуг"/></div>
-</section>
-<div class="stats">
-  <div class="stat"><b>48</b><span>услуг в каталоге</span></div>
-  <div class="stat"><b>24ч</b><span>среднее время ответа</span></div>
-  <div class="stat"><b>12k</b><span>обращений / мес</span></div>
-  <div class="stat"><b>98%</b><span>доступность сервиса</span></div>
 </div>
 </div>
 </main>
