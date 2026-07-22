@@ -67,7 +67,8 @@ ${body}
 </html>`;
 }
 
-const baseCss = `*,*::before,*::after{box-sizing:border-box}
+const baseCss = `
+*,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
   margin:0;min-height:100dvh;display:flex;flex-direction:column;
@@ -85,9 +86,20 @@ button,input,textarea,select{font:inherit}
 }
 .demo-bar a{color:var(--acc);font-weight:700}
 
+.shell-width{
+  width:100%;
+  max-width:var(--max);
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:var(--pad);
+  padding-right:var(--pad);
+}
+
 .top{
-  width:min(100% - 2*var(--pad), var(--max));
-  margin:0 auto;padding: .9rem 0;
+  width:100%;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:.9rem var(--pad);
   display:grid;gap:.75rem;align-items:center;
   border-bottom:1px solid var(--line);
 }
@@ -95,7 +107,6 @@ button,input,textarea,select{font:inherit}
 .logo{font-family:var(--display);font-weight:700;font-size:clamp(1.05rem,2.8vw,1.2rem);letter-spacing:-.02em;line-height:1.2}
 .nav{
   display:flex;flex-wrap:wrap;align-items:center;gap:.35rem .15rem;
-  margin:0 calc(var(--pad) * -0.15);
 }
 .nav a{
   color:var(--muted);font-size:.9rem;font-weight:600;
@@ -115,11 +126,13 @@ button,input,textarea,select{font:inherit}
 
 .main{flex:1 0 auto;width:100%}
 .wrap{
-  width:min(100% - 2*var(--pad), var(--max));
-  margin:0 auto;padding:1.1rem 0 2.4rem;
+  width:100%;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:1.75rem var(--pad) 3rem;
 }
 .hero{
-  display:grid;gap:1.15rem;align-items:center;margin: .4rem 0 1.4rem;
+  display:grid;gap:1.15rem;align-items:center;margin:.4rem 0 1.4rem;
 }
 .hero > div:first-child{min-width:0}
 .hero h1{
@@ -140,7 +153,7 @@ button,input,textarea,select{font:inherit}
 
 .grid{display:grid;gap:1rem;align-items:stretch}
 .grid > .card, .grid > a.card{height:100%;display:flex;flex-direction:column}
-.grid > a.card .ph{margin: -1.15rem -1.15rem 0.85rem}
+.grid > a.card .ph{margin:-1.15rem -1.15rem .85rem}
 .card{
   background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
   padding:1.15rem;overflow:hidden;min-width:0;
@@ -151,19 +164,25 @@ button,input,textarea,select{font:inherit}
 .ph img{width:100%;height:100%;object-fit:cover}
 .price{color:var(--acc);font-weight:800;margin-top:auto;padding-top:.45rem}
 
-.section{margin:1.6rem 0 0}
+.section{margin:1.25rem 0 0}
+.section-narrow{max-width:720px}
+.wrap > .kicker,.wrap > h2,.wrap > .muted,.wrap > .list,.wrap > .form{max-width:720px}
+.wrap > .table-wrap{max-width:720px}
 .section h2{
   font-family:var(--display);font-size:clamp(1.35rem,3.5vw,1.9rem);
   margin:0 0 .9rem;letter-spacing:-.02em;text-wrap:balance;
 }
 
-.table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 .5rem}
-.table{width:100%;border-collapse:collapse;min-width:480px}
+.table-wrap{width:100%;max-width:720px;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 .75rem;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.table{width:100%;border-collapse:collapse;table-layout:fixed}
 .table th,.table td{
-  text-align:left;vertical-align:top;padding:.75rem .55rem;
-  border-bottom:1px solid var(--line);font-size:.92rem;
+  text-align:left;vertical-align:middle;padding:.9rem 1rem;
+  border-bottom:1px solid var(--line);font-size:.95rem;
 }
-.table th{color:var(--muted);font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+.table tr:last-child td{border-bottom:0}
+.table th{color:var(--muted);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;background:var(--soft)}
+.table th:nth-child(2),.table td:nth-child(2),
+.table th:nth-child(3),.table td:nth-child(3){width:26%}
 
 .badge{
   display:inline-flex;align-items:center;padding:.22rem .55rem;border-radius:999px;
@@ -189,8 +208,10 @@ button,input,textarea,select{font:inherit}
 .list li{margin:.35rem 0}
 
 .foot{
-  width:min(100% - 2*var(--pad), var(--max));
-  margin:auto auto 0;padding:1.2rem 0 1.6rem;
+  width:100%;
+  max-width:var(--max);
+  margin:auto auto 0;
+  padding:1.2rem var(--pad) 1.6rem;
   border-top:1px solid var(--line);
   display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;
   color:var(--muted);font-size:.9rem;
@@ -251,8 +272,7 @@ button,input,textarea,select{font:inherit}
 }
 @media (max-width:759px){
   .hero-actions .btn{flex:1 1 160px}
-  .table{min-width:100%;font-size:.85rem}
-  .table th,.table td{padding:.65rem .35rem}
+  .table th,.table td{padding:.7rem .75rem;font-size:.88rem}
 }
 
 /* themes */
@@ -366,7 +386,7 @@ function trailmarket() {
     active: "delivery.html",
     title: "Доставка — TrailMarket",
     canonical: "https://budnikcam.github.io/sites/trailmarket/delivery.html",
-    body: `<div class="wrap section">
+    body: `<div class="wrap">
 <p class="kicker">Logistics</p>
 <h2>Доставка и оплата</h2>
 <table class="table">
@@ -384,7 +404,7 @@ function trailmarket() {
     active: "contacts.html",
     title: "Контакты — TrailMarket",
     canonical: "https://budnikcam.github.io/sites/trailmarket/contacts.html",
-    body: `<div class="wrap section">
+    body: `<div class="wrap">
 <p class="kicker">Contacts</p>
 <h2>Связаться с магазином</h2>
 <form class="form" action="mailto:vanyasoloma67@gmail.com" method="get">
@@ -447,7 +467,7 @@ function smolServices() {
     active: "services.html",
     title: "Услуги — Смоленские сервисы",
     canonical: "https://budnikcam.github.io/sites/smol-services/services.html",
-    body: `<div class="wrap section">
+    body: `<div class="wrap">
 <p class="kicker">Services</p>
 <h2>Каталог услуг</h2>
 <div class="grid grid-3">
@@ -466,7 +486,7 @@ function smolServices() {
     active: "status.html",
     title: "Статусы — Смоленские сервисы",
     canonical: "https://budnikcam.github.io/sites/smol-services/status.html",
-    body: `<div class="wrap section">
+    body: `<div class="wrap">
 <p class="kicker">Tracking</p>
 <h2>Статусы обращений</h2>
 <table class="table">
@@ -483,7 +503,7 @@ function smolServices() {
     active: "cabinet.html",
     title: "Кабинет — Смоленские сервисы",
     canonical: "https://budnikcam.github.io/sites/smol-services/cabinet.html",
-    body: `<div class="wrap section">
+    body: `<div class="wrap">
 <p class="kicker">Personal account</p>
 <h2>Личный кабинет заявителя</h2>
 <div class="shell">
@@ -510,7 +530,7 @@ function smolServices() {
     active: "contacts.html",
     title: "Контакты — Смоленские сервисы",
     canonical: "https://budnikcam.github.io/sites/smol-services/contacts.html",
-    body: `<div class="wrap section">
+    body: `<div class="wrap">
 <p class="kicker">Support</p>
 <h2>Контакты поддержки</h2>
 <div class="grid grid-2">
@@ -564,7 +584,7 @@ function ledgerops() {
     active: "dashboard.html",
     title: "Дашборд — LedgerOps",
     canonical: "https://budnikcam.github.io/sites/ledgerops/dashboard.html",
-    body: `<div class="wrap section">
+    body: `<div class="wrap">
 <div class="shell">
   <aside class="side">
     <div class="logo" style="margin-bottom:1rem;color:var(--acc)">LedgerOps</div>
@@ -597,7 +617,7 @@ function ledgerops() {
     active: "leads.html",
     title: "Лиды — LedgerOps",
     canonical: "https://budnikcam.github.io/sites/ledgerops/leads.html",
-    body: `<div class="wrap section"><p class="kicker">Pipeline</p><h2>Лиды</h2>
+    body: `<div class="wrap"><p class="kicker">Pipeline</p><h2>Лиды</h2>
 <table class="table"><tr><th>Компания</th><th>Источник</th><th>Ответственный</th><th>Статус</th></tr>
 <tr><td>North Retail</td><td>Сайт</td><td>Анна</td><td><span class="badge">квалификация</span></td></tr>
 <tr><td>Atlas Logistics</td><td>Реклама</td><td>Игорь</td><td><span class="badge">КП</span></td></tr>
@@ -610,7 +630,7 @@ function ledgerops() {
     active: "deals.html",
     title: "Сделки — LedgerOps",
     canonical: "https://budnikcam.github.io/sites/ledgerops/deals.html",
-    body: `<div class="wrap section"><p class="kicker">Revenue</p><h2>Сделки</h2>
+    body: `<div class="wrap"><p class="kicker">Revenue</p><h2>Сделки</h2>
 <div class="grid grid-3">
   <div class="card"><h3>FieldCo · внедрение</h3><p>Сумма 890 000 ₽</p><span class="badge">закрытие</span></div>
   <div class="card"><h3>Atlas · подписка</h3><p>Сумма 120 000 ₽ / мес</p><span class="badge">оплата</span></div>
@@ -623,7 +643,7 @@ function ledgerops() {
     active: "contacts.html",
     title: "Демо-доступ — LedgerOps",
     canonical: "https://budnikcam.github.io/sites/ledgerops/contacts.html",
-    body: `<div class="wrap section"><p class="kicker">Demo</p><h2>Запросить демо-доступ</h2>
+    body: `<div class="wrap"><p class="kicker">Demo</p><h2>Запросить демо-доступ</h2>
 <form class="form"><input placeholder="Компания"/><input placeholder="Email"/><textarea rows="4" placeholder="Какой процесс хотите закрыть?"></textarea><button class="btn" type="button">Отправить</button></form></div>`,
   });
 }
@@ -670,7 +690,7 @@ function fieldly() {
     active: "tasks.html",
     title: "Задачи — Fieldly",
     canonical: "https://budnikcam.github.io/sites/fieldly/tasks.html",
-    body: `<div class="wrap section"><p class="kicker">Today</p><h2>Задачи бригады</h2>
+    body: `<div class="wrap"><p class="kicker">Today</p><h2>Задачи бригады</h2>
 <div class="grid" style="max-width:520px;margin:0 auto">
   <a class="card" href="act.html"><h3>ул. Ленина, 14</h3><p>Монтаж · 10:30</p><span class="badge">в пути</span></a>
   <a class="card" href="act.html"><h3>пр. Гагарина, 8</h3><p>Сервис · 13:00</p><span class="badge">ожидает</span></a>
@@ -683,7 +703,7 @@ function fieldly() {
     active: "act.html",
     title: "Акт — Fieldly",
     canonical: "https://budnikcam.github.io/sites/fieldly/act.html",
-    body: `<div class="wrap section"><p class="kicker">Work order</p><h2>Акт выполненных работ</h2>
+    body: `<div class="wrap"><p class="kicker">Work order</p><h2>Акт выполненных работ</h2>
 <div class="card" style="max-width:560px">
   <h3>ул. Ленина, 14</h3>
   <ul class="list"><li>Диагностика узла</li><li>Замена комплектующих</li><li>Фото до / после</li><li>Подпись клиента</li></ul>
@@ -696,7 +716,7 @@ function fieldly() {
     active: "profile.html",
     title: "Профиль — Fieldly",
     canonical: "https://budnikcam.github.io/sites/fieldly/profile.html",
-    body: `<div class="wrap section"><p class="kicker">Crew</p><h2>Профиль исполнителя</h2>
+    body: `<div class="wrap"><p class="kicker">Crew</p><h2>Профиль исполнителя</h2>
 <div class="card" style="max-width:480px"><h3>Бригада №4 · Алексей</h3><p>Смен: 18 · Закрыто задач: 142 · Рейтинг: 4.9</p></div></div>`,
   });
 
@@ -705,7 +725,7 @@ function fieldly() {
     active: "contacts.html",
     title: "Связаться — Fieldly",
     canonical: "https://budnikcam.github.io/sites/fieldly/contacts.html",
-    body: `<div class="wrap section"><p class="kicker">Pilot</p><h2>Запросить пилот для бригад</h2>
+    body: `<div class="wrap"><p class="kicker">Pilot</p><h2>Запросить пилот для бригад</h2>
 <form class="form"><input placeholder="Компания"/><input placeholder="Телефон"/><button class="btn" type="button">Отправить</button></form></div>`,
   });
 }
@@ -747,7 +767,7 @@ function shopbot() {
     active: "features.html",
     title: "Возможности — ShopBot Pro",
     canonical: "https://budnikcam.github.io/sites/shopbot-pro/features.html",
-    body: `<div class="wrap section"><h2>Возможности</h2><div class="grid grid-3">
+    body: `<div class="wrap"><h2>Возможности</h2><div class="grid grid-3">
 <div class="card"><h3>Каталог</h3><p>Карточки, варианты, остатки.</p></div>
 <div class="card"><h3>Оплата</h3><p>Ссылка на платёж и подтверждение.</p></div>
 <div class="card"><h3>CRM sync</h3><p>Лиды и заказы в вашей воронке.</p></div>
@@ -759,7 +779,7 @@ function shopbot() {
     active: "pricing.html",
     title: "Тарифы — ShopBot Pro",
     canonical: "https://budnikcam.github.io/sites/shopbot-pro/pricing.html",
-    body: `<div class="wrap section"><h2>Тарифы</h2><div class="grid grid-3">
+    body: `<div class="wrap"><h2>Тарифы</h2><div class="grid grid-3">
 <div class="card"><h3>Start</h3><div class="price">от 4 900 ₽/мес</div><p>Каталог + заявления</p></div>
 <div class="card"><h3>Sales</h3><div class="price">от 9 900 ₽/мес</div><p>Оплата + CRM</p></div>
 <div class="card"><h3>Pro</h3><div class="price">от 19 900 ₽/мес</div><p>Сценарии + аналитика</p></div>
@@ -771,7 +791,7 @@ function shopbot() {
     active: "demo.html",
     title: "Демо-чат — ShopBot Pro",
     canonical: "https://budnikcam.github.io/sites/shopbot-pro/demo.html",
-    body: `<div class="wrap section"><h2>Демонстрация диалога</h2>
+    body: `<div class="wrap"><h2>Демонстрация диалога</h2>
 <div class="phone"><div class="phone-top">ShopBot Pro</div><div class="chat">
 <div class="bubble bot">Здравствуйте! Показать каталог или статус заказа?</div>
 <div class="bubble user">Каталог</div>
@@ -786,7 +806,7 @@ function shopbot() {
     active: "contacts.html",
     title: "Контакты — ShopBot Pro",
     canonical: "https://budnikcam.github.io/sites/shopbot-pro/contacts.html",
-    body: `<div class="wrap section"><h2>Запустить бота под ваш магазин</h2>
+    body: `<div class="wrap"><h2>Запустить бота под ваш магазин</h2>
 <form class="form"><input placeholder="Ниша / ассортимент"/><input placeholder="Telegram или email"/><button class="btn" type="button">Отправить</button></form></div>`,
   });
 }
@@ -828,7 +848,7 @@ function datapine() {
     active: "jobs.html",
     title: "Задачи — DataPine",
     canonical: "https://budnikcam.github.io/sites/datapine/jobs.html",
-    body: `<div class="wrap section"><h2>Задачи парсинга</h2>
+    body: `<div class="wrap"><h2>Задачи парсинга</h2>
 <table class="table"><tr><th>Задача</th><th>Расписание</th><th>Статус</th></tr>
 <tr><td>Цены конкурентов · outdoor</td><td>каждый час</td><td><span class="badge">ok</span></td></tr>
 <tr><td>Сбор карточек WB</td><td>02:00</td><td><span class="badge">queue</span></td></tr>
@@ -841,7 +861,7 @@ function datapine() {
     active: "sources.html",
     title: "Источники — DataPine",
     canonical: "https://budnikcam.github.io/sites/datapine/sources.html",
-    body: `<div class="wrap section"><h2>Источники</h2><div class="grid grid-3">
+    body: `<div class="wrap"><h2>Источники</h2><div class="grid grid-3">
 <div class="card"><h3>Витрины</h3><p>HTML / JSON endpoints</p></div>
 <div class="card"><h3>API</h3><p>Ключи, лимиты, ретраи</p></div>
 <div class="card"><h3>Файлы</h3><p>CSV / XLSX выгрузки</p></div>
@@ -853,7 +873,7 @@ function datapine() {
     active: "reports.html",
     title: "Отчёты — DataPine",
     canonical: "https://budnikcam.github.io/sites/datapine/reports.html",
-    body: `<div class="wrap section"><h2>Отчёты</h2><div class="stats">
+    body: `<div class="wrap"><h2>Отчёты</h2><div class="stats">
 <div class="stat"><b>12.4k</b><span>строк за сутки</span></div>
 <div class="stat"><b>0.8%</b><span>ошибок</span></div>
 <div class="stat"><b>6</b><span>активных задач</span></div>
@@ -866,7 +886,7 @@ function datapine() {
     active: "contacts.html",
     title: "Контакты — DataPine",
     canonical: "https://budnikcam.github.io/sites/datapine/contacts.html",
-    body: `<div class="wrap section"><h2>Обсудить парсинг под задачу</h2>
+    body: `<div class="wrap"><h2>Обсудить парсинг под задачу</h2>
 <form class="form"><input placeholder="Что собираем?"/><input placeholder="Куда выгружать?"/><button class="btn" type="button">Отправить</button></form></div>`,
   });
 }
@@ -908,7 +928,7 @@ function northline() {
     active: "services.html",
     title: "Услуги — Northline",
     canonical: "https://budnikcam.github.io/sites/northline/services.html",
-    body: `<div class="wrap section"><h2>Услуги</h2><div class="grid grid-3">
+    body: `<div class="wrap"><h2>Услуги</h2><div class="grid grid-3">
 <div class="card"><h3>Product audit</h3><p>Разбор архитектуры и узких мест.</p></div>
 <div class="card"><h3>Design system</h3><p>Интерфейсный каркас под рост команды.</p></div>
 <div class="card"><h3>Launch</h3><p>Сборка MVP и вывод в прод.</p></div>
@@ -920,7 +940,7 @@ function northline() {
     active: "cases.html",
     title: "Кейсы — Northline",
     canonical: "https://budnikcam.github.io/sites/northline/cases.html",
-    body: `<div class="wrap section"><h2>Кейсы</h2><div class="grid grid-2">
+    body: `<div class="wrap"><h2>Кейсы</h2><div class="grid grid-2">
 <div class="card"><h3>Ретейл-платформа</h3><p>Сократили time-to-market релизов на 35%.</p></div>
 <div class="card"><h3>B2B-кабинет</h3><p>Собрали роли, SLA и отчётность в одном контуре.</p></div>
 </div></div>`,
@@ -931,7 +951,7 @@ function northline() {
     active: "about.html",
     title: "О компании — Northline",
     canonical: "https://budnikcam.github.io/sites/northline/about.html",
-    body: `<div class="wrap section"><h2>О компании</h2>
+    body: `<div class="wrap"><h2>О компании</h2>
 <p class="muted" style="max-width:60ch">Northline — демо-бренд консалтинга. Страница показывает корпоративную структуру сайта: миссия, подход, команда и CTA.</p></div>`,
   });
 
@@ -940,7 +960,7 @@ function northline() {
     active: "contacts.html",
     title: "Контакты — Northline",
     canonical: "https://budnikcam.github.io/sites/northline/contacts.html",
-    body: `<div class="wrap section"><h2>Обсудить проект</h2>
+    body: `<div class="wrap"><h2>Обсудить проект</h2>
 <form class="form"><input placeholder="Компания"/><input placeholder="Email"/><textarea rows="4" placeholder="Задача"></textarea><button class="btn" type="button">Отправить</button></form></div>`,
   });
 }
@@ -983,7 +1003,7 @@ function karelia() {
     active: "tours.html",
     title: "Туры — Karelia Escape",
     canonical: "https://budnikcam.github.io/sites/karelia-escape/tours.html",
-    body: `<div class="wrap section"><h2>Каталог туров</h2><div class="grid grid-3">
+    body: `<div class="wrap"><h2>Каталог туров</h2><div class="grid grid-3">
 <a class="card" href="tour.html"><div class="ph"><img src="media/tour1.jpg" alt=""/></div><h3>Озёра и скалы</h3><div class="price">от 28 900 ₽</div></a>
 <a class="card" href="tour.html"><div class="ph"><img src="media/tour2.jpg" alt=""/></div><h3>Водопады weekend</h3><div class="price">от 19 500 ₽</div></a>
 <a class="card" href="tour.html"><div class="ph"><img src="media/tour3.jpg" alt=""/></div><h3>Северный маршрут</h3><div class="price">от 34 200 ₽</div></a>
@@ -1009,7 +1029,7 @@ function karelia() {
     active: "booking.html",
     title: "Бронирование — Karelia Escape",
     canonical: "https://budnikcam.github.io/sites/karelia-escape/booking.html",
-    body: `<div class="wrap section"><h2>Бронирование</h2>
+    body: `<div class="wrap"><h2>Бронирование</h2>
 <form class="form">
 <select><option>Озёра и скалы</option><option>Водопады weekend</option><option>Северный маршрут</option></select>
 <input type="date"/><input placeholder="Имя"/><input placeholder="Телефон"/>
@@ -1022,7 +1042,7 @@ function karelia() {
     active: "contacts.html",
     title: "Контакты — Karelia Escape",
     canonical: "https://budnikcam.github.io/sites/karelia-escape/contacts.html",
-    body: `<div class="wrap section"><h2>Контакты</h2>
+    body: `<div class="wrap"><h2>Контакты</h2>
 <div class="card" style="max-width:480px"><p>Telegram / WhatsApp: +7 906 669-87-89</p><p>Email: vanyasoloma67@gmail.com</p></div></div>`,
   });
 }
@@ -1065,7 +1085,7 @@ function teplo() {
     active: "help.html",
     title: "Кому помогаем — Фонд «Тепло»",
     canonical: "https://budnikcam.github.io/sites/teplo-fond/help.html",
-    body: `<div class="wrap section"><h2>Кому помогаем</h2><div class="grid grid-3">
+    body: `<div class="wrap"><h2>Кому помогаем</h2><div class="grid grid-3">
 <div class="card"><h3>Семьи</h3><p>Продукты, лекарства, школа.</p></div>
 <div class="card"><h3>Пожилые</h3><p>Бытовая помощь и уход.</p></div>
 <div class="card"><h3>Срочные сборы</h3><p>Точечная поддержка по заявкам.</p></div>
@@ -1077,7 +1097,7 @@ function teplo() {
     active: "donate.html",
     title: "Помочь — Фонд «Тепло»",
     canonical: "https://budnikcam.github.io/sites/teplo-fond/donate.html",
-    body: `<div class="wrap section"><h2>Сделать пожертвование</h2>
+    body: `<div class="wrap"><h2>Сделать пожертвование</h2>
 <div class="pager"><span class="chip">500 ₽</span><span class="chip">1 000 ₽</span><span class="chip">3 000 ₽</span><span class="chip">своя сумма</span></div>
 <form class="form" style="margin-top:1rem"><input placeholder="Сумма, ₽"/><input placeholder="Email для чека"/><button class="btn" type="button">Перейти к оплате</button></form>
 <p class="muted">Демо-страница без реального платежа.</p></div>`,
@@ -1088,7 +1108,7 @@ function teplo() {
     active: "reports.html",
     title: "Отчёты — Фонд «Тепло»",
     canonical: "https://budnikcam.github.io/sites/teplo-fond/reports.html",
-    body: `<div class="wrap section"><h2>Публичные отчёты</h2>
+    body: `<div class="wrap"><h2>Публичные отчёты</h2>
 <table class="table"><tr><th>Период</th><th>Собрано</th><th>Направлено</th></tr>
 <tr><td>Июнь 2026</td><td>1.2 млн ₽</td><td>1.15 млн ₽</td></tr>
 <tr><td>Май 2026</td><td>980 тыс ₽</td><td>940 тыс ₽</td></tr>
@@ -1101,7 +1121,7 @@ function teplo() {
     active: "contacts.html",
     title: "Контакты — Фонд «Тепло»",
     canonical: "https://budnikcam.github.io/sites/teplo-fond/contacts.html",
-    body: `<div class="wrap section"><h2>Контакты фонда</h2>
+    body: `<div class="wrap"><h2>Контакты фонда</h2>
 <div class="card" style="max-width:520px"><p>Email: warmth@teplo-fond.demo</p><p>Телефон: +7 906 669-87-89</p></div></div>`,
   });
 }

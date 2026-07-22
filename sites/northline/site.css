@@ -1,3 +1,4 @@
+
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
@@ -16,9 +17,20 @@ button,input,textarea,select{font:inherit}
 }
 .demo-bar a{color:var(--acc);font-weight:700}
 
+.shell-width{
+  width:100%;
+  max-width:var(--max);
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:var(--pad);
+  padding-right:var(--pad);
+}
+
 .top{
-  width:min(100% - 2*var(--pad), var(--max));
-  margin:0 auto;padding: .9rem 0;
+  width:100%;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:.9rem var(--pad);
   display:grid;gap:.75rem;align-items:center;
   border-bottom:1px solid var(--line);
 }
@@ -26,7 +38,6 @@ button,input,textarea,select{font:inherit}
 .logo{font-family:var(--display);font-weight:700;font-size:clamp(1.05rem,2.8vw,1.2rem);letter-spacing:-.02em;line-height:1.2}
 .nav{
   display:flex;flex-wrap:wrap;align-items:center;gap:.35rem .15rem;
-  margin:0 calc(var(--pad) * -0.15);
 }
 .nav a{
   color:var(--muted);font-size:.9rem;font-weight:600;
@@ -46,11 +57,13 @@ button,input,textarea,select{font:inherit}
 
 .main{flex:1 0 auto;width:100%}
 .wrap{
-  width:min(100% - 2*var(--pad), var(--max));
-  margin:0 auto;padding:1.1rem 0 2.4rem;
+  width:100%;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:1.75rem var(--pad) 3rem;
 }
 .hero{
-  display:grid;gap:1.15rem;align-items:center;margin: .4rem 0 1.4rem;
+  display:grid;gap:1.15rem;align-items:center;margin:.4rem 0 1.4rem;
 }
 .hero > div:first-child{min-width:0}
 .hero h1{
@@ -71,7 +84,7 @@ button,input,textarea,select{font:inherit}
 
 .grid{display:grid;gap:1rem;align-items:stretch}
 .grid > .card, .grid > a.card{height:100%;display:flex;flex-direction:column}
-.grid > a.card .ph{margin: -1.15rem -1.15rem 0.85rem}
+.grid > a.card .ph{margin:-1.15rem -1.15rem .85rem}
 .card{
   background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
   padding:1.15rem;overflow:hidden;min-width:0;
@@ -82,19 +95,25 @@ button,input,textarea,select{font:inherit}
 .ph img{width:100%;height:100%;object-fit:cover}
 .price{color:var(--acc);font-weight:800;margin-top:auto;padding-top:.45rem}
 
-.section{margin:1.6rem 0 0}
+.section{margin:1.25rem 0 0}
+.section-narrow{max-width:720px}
+.wrap > .kicker,.wrap > h2,.wrap > .muted,.wrap > .list,.wrap > .form{max-width:720px}
+.wrap > .table-wrap{max-width:720px}
 .section h2{
   font-family:var(--display);font-size:clamp(1.35rem,3.5vw,1.9rem);
   margin:0 0 .9rem;letter-spacing:-.02em;text-wrap:balance;
 }
 
-.table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 .5rem}
-.table{width:100%;border-collapse:collapse;min-width:480px}
+.table-wrap{width:100%;max-width:720px;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 .75rem;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.table{width:100%;border-collapse:collapse;table-layout:fixed}
 .table th,.table td{
-  text-align:left;vertical-align:top;padding:.75rem .55rem;
-  border-bottom:1px solid var(--line);font-size:.92rem;
+  text-align:left;vertical-align:middle;padding:.9rem 1rem;
+  border-bottom:1px solid var(--line);font-size:.95rem;
 }
-.table th{color:var(--muted);font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+.table tr:last-child td{border-bottom:0}
+.table th{color:var(--muted);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;background:var(--soft)}
+.table th:nth-child(2),.table td:nth-child(2),
+.table th:nth-child(3),.table td:nth-child(3){width:26%}
 
 .badge{
   display:inline-flex;align-items:center;padding:.22rem .55rem;border-radius:999px;
@@ -120,8 +139,10 @@ button,input,textarea,select{font:inherit}
 .list li{margin:.35rem 0}
 
 .foot{
-  width:min(100% - 2*var(--pad), var(--max));
-  margin:auto auto 0;padding:1.2rem 0 1.6rem;
+  width:100%;
+  max-width:var(--max);
+  margin:auto auto 0;
+  padding:1.2rem var(--pad) 1.6rem;
   border-top:1px solid var(--line);
   display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;
   color:var(--muted);font-size:.9rem;
@@ -182,8 +203,7 @@ button,input,textarea,select{font:inherit}
 }
 @media (max-width:759px){
   .hero-actions .btn{flex:1 1 160px}
-  .table{min-width:100%;font-size:.85rem}
-  .table th,.table td{padding:.65rem .35rem}
+  .table th,.table td{padding:.7rem .75rem;font-size:.88rem}
 }
 
 /* themes */
