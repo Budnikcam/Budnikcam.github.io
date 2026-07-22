@@ -400,12 +400,12 @@ function trailmarket() {
 <div class="stack">
 <p class="kicker">Logistics</p>
 <h2>Доставка и оплата</h2>
-<div class="table-wrap"><table class="table">
+<table class="table">
   <tr><th>Способ</th><th>Срок</th><th>Стоимость</th></tr>
   <tr><td>Курьер по городу</td><td>1–2 дня</td><td>от 350 ₽</td></tr>
   <tr><td>Пункт выдачи</td><td>2–5 дней</td><td>от 290 ₽</td></tr>
   <tr><td>ТК по РФ</td><td>3–10 дней</td><td>по тарифу</td></tr>
-</table></div>
+</table>
 <p class="muted">Оплата: карта, СБП, рассрочка. Возврат 14 дней.</p>
 </div>
 </div>`,
@@ -1166,7 +1166,7 @@ for (const dir of [
     const full = path.join(folder, file);
     let html = fs.readFileSync(full, "utf8");
     html = html.replace(
-      /<table class="table">([\s\S]*?)<\/table>/g,
+      /(?<!<div class="table-wrap">)<table class="table">([\s\S]*?)<\/table>/g,
       '<div class="table-wrap"><table class="table">$1</table></div>'
     );
     fs.writeFileSync(full, html, "utf8");
