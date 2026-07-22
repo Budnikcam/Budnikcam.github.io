@@ -165,15 +165,24 @@ button,input,textarea,select{font:inherit}
 .price{color:var(--acc);font-weight:800;margin-top:auto;padding-top:.45rem}
 
 .section{margin:1.25rem 0 0}
-.section-narrow{max-width:720px}
-.wrap > .kicker,.wrap > h2,.wrap > .muted,.wrap > .list,.wrap > .form{max-width:720px}
-.wrap > .table-wrap{max-width:720px}
-.section h2{
+.wrap > h2,.section h2,.stack > h2{
   font-family:var(--display);font-size:clamp(1.35rem,3.5vw,1.9rem);
   margin:0 0 .9rem;letter-spacing:-.02em;text-wrap:balance;
 }
 
-.table-wrap{width:100%;max-width:720px;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 .75rem;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+/* text / table / form pages: one centered column */
+.stack{
+  width:min(100%,680px);
+  margin-inline:auto;
+}
+.wrap:not(:has(.grid,.shell,.hero,.stats,.phone,.stack)){
+  display:flex;flex-direction:column;align-items:center;
+}
+.wrap:not(:has(.grid,.shell,.hero,.stats,.phone,.stack)) > *{
+  width:100%;max-width:680px;
+}
+
+.table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 .75rem;border:1px solid var(--line);border-radius:14px;background:var(--card)}
 .table{width:100%;border-collapse:collapse;table-layout:fixed}
 .table th,.table td{
   text-align:left;vertical-align:middle;padding:.9rem 1rem;
@@ -198,7 +207,8 @@ button,input,textarea,select{font:inherit}
 .stat b{display:block;font-family:var(--display);font-size:clamp(1.15rem,3vw,1.35rem);line-height:1.15}
 .stat span{color:var(--muted);font-size:.82rem}
 
-.form{display:grid;gap:.7rem;width:min(100%,520px)}
+.form{display:grid;gap:.7rem;width:100%}
+.stack .form,.wrap:not(:has(.grid,.shell,.hero,.stats,.phone,.stack)) > .form{max-width:520px;margin-inline:auto}
 .form input,.form textarea,.form select{
   width:100%;min-height:44px;padding:.8rem .9rem;border-radius:12px;
   border:1px solid var(--line);background:var(--card);color:var(--ink);
@@ -387,15 +397,17 @@ function trailmarket() {
     title: "Доставка — TrailMarket",
     canonical: "https://budnikcam.github.io/sites/trailmarket/delivery.html",
     body: `<div class="wrap">
+<div class="stack">
 <p class="kicker">Logistics</p>
 <h2>Доставка и оплата</h2>
-<table class="table">
+<div class="table-wrap"><table class="table">
   <tr><th>Способ</th><th>Срок</th><th>Стоимость</th></tr>
   <tr><td>Курьер по городу</td><td>1–2 дня</td><td>от 350 ₽</td></tr>
   <tr><td>Пункт выдачи</td><td>2–5 дней</td><td>от 290 ₽</td></tr>
   <tr><td>ТК по РФ</td><td>3–10 дней</td><td>по тарифу</td></tr>
-</table>
+</table></div>
 <p class="muted">Оплата: карта, СБП, рассрочка. Возврат 14 дней.</p>
+</div>
 </div>`,
   });
 
